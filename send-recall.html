@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+    <title>Блеквайт</title>
+
+    <!-- шрифты -->
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div id="shadow"></div>
+    <div id="burger-window">
+        <div class="burger-window__wrapper">
+            <div class="burger-window__content-wrapper">
+                <div class="burger-window__content">
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/link.svg" alt="Скопировать ссылку">
+                        <div class="burger-window__content-name">
+                            Копировать ссылку
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/share-detail.svg" alt="Поделиться">
+                        <div class="burger-window__content-name">
+                            Поделиться
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/home-button.svg" alt="Домой">
+                        <div class="burger-window__content-name">
+                            Домой
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/basket-burger.svg" alt="В корзину">
+                        <div class="burger-window__content-name">
+                            В корзину
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/support.svg" alt=" Написать тех. поддержке">
+                        <div class="burger-window__content-name">
+                            Контакты
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/question-2.svg" alt="Оставить обращение">
+                        <div class="burger-window__content-name">
+                            Оставить обращение
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-detail footer-open">
+                <div class="container footer__container footer-detail__container">
+                    <button type="button" id="burger-close">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="page-header categories-page__header">
+        <a href="./profile.html" class="page-header__button">
+            <img src="./img/back-index.svg" alt="etc">
+        </a>
+        <h3 class="page-header__title">Новый отзыв</h3>
+        <button class="page-header__button categories-page__header-button" id="burger">
+            <img src="./img/dots.svg" alt="etc">
+        </button>
+    </header>
+    <form action="" class="send-page__form" method="post">
+        <section class="send-page__section">
+            <div class="send-page__section-title text-font-18">
+                Оцените товар
+            </div>
+            <textarea class="send-page__textarea text-font-18" id="send-textarea" cols="30" rows="10"
+                placeholder="Текст"></textarea>
+            <div class="send-page__section-title text-font-18">
+                Фотографии <span class="add_photo-item">(0/5)</span>
+            </div>
+            <div class="send-page__input">
+                <label id="my-file-label" for="myfile" class="send-page__label"><img src="./img/choice.png"
+                        alt="choice image"></label>
+                <input type="file" id="my-file" multiple accept="image/*"">
+                <div class=" send-page__images-list" id="uploadImagesList">
+                <div class="send-page__images-item"><span class="img-wrap"><img src="" alt=""></span></div>
+            </div>
+            </div>
+        </section>
+        <footer class="footer footer-recall">
+            <div class="container footer__container footer-detail__container">
+                <!-- <button type="button" class="footer-detail__btn sale">Купить</button> -->
+                <button type="button" class="footer-detail__btn basket send-page__form-button">
+                    Отправить отзыв
+                </button>
+            </div>
+        </footer>
+    </form>
+    <!-- jquery -->
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <!-- скрипты -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>

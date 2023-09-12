@@ -1,0 +1,510 @@
+.profile-page__header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 18px;
+    height: 80px;
+}
+
+.profile-page__header-info {
+    display: flex;
+    align-items: center;
+    width: 150%;
+    position: relative;
+}
+
+.profile-header__info-image {
+    width: 20%;
+}
+
+.profile-header__info-user {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.profile-page__header-settings {
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    align-items: center;
+}
+
+.profile-header__settings-item {
+    position: relative;
+    width: 50%;
+    background: transparent;
+}
+
+.profile-header__settings-item img {
+    width: 25%;
+}
+
+.profile-header__settings-item div {
+    color: #2f2f2f;
+}
+
+.profile-page__list {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 16px 16px 0 0;
+    padding: 15px 0 10px 0;
+    margin-bottom: 7px;
+}
+
+.profile-page__list-item {
+    position: relative;
+    width: 23%;
+    text-align: center;
+    background: transparent;
+}
+
+.profile-page__list-item img {
+    width: 30%;
+}
+
+.profile-page__list-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 37px;
+    color: #2f2f2f;
+}
+
+.profile-page__myorders-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.myorders-title__name {
+    color: #2f2f2f;
+    font-size: 18px;
+}
+
+.myorders-title__etc {
+    display: flex;
+    align-items: center;
+}
+
+.myorders-title__etc-text {
+    margin-right: 5px;
+    color: #9f9f9f;
+}
+
+.myorders-title__etc img {
+    padding-top: 3px;
+    height: 12px;
+}
+
+@media screen and (max-width: 316px) {
+    .myorders-title__etc img {
+        padding-top: 1px;
+        height: 9px;
+    }
+}
+
+.profile-page__myorders-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 16px;
+}
+
+.myorders-content__item {
+    width: 23%;
+    position: relative;
+}
+
+.counter-list {
+    top: 0 !important;
+    right: 15px !important;
+}
+
+
+.myorders-content__item img {
+    width: 40%;
+}
+
+.myorders-content__text {
+    text-align: center;
+    color: #2f2f2f;
+}
+
+.myorders-content__text span {
+    white-space: nowrap;
+}
+
+
+
+.profile-page__services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-page__services-item {
+    width: 23%;
+    text-align: center;
+}
+
+.profile-page__services-item img {
+    width: 40%;
+}
+
+.profile-page__services-text {
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2f2f2f;
+}
+
+.profile-page__foryou-title {
+    margin: 10px 0 !important;
+}
+
+
+/*mydata*/
+
+.page-mydata__wrapper, .page-auth__wrapper {
+    display: none;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    transition: ease 0.6s;
+    height: 100%;
+    top: 0;
+    left: 0; bottom: 0;
+    margin: auto;
+    display: none;
+    opacity: 0;
+    z-index: 50;
+    text-align: center;
+}
+
+.page-mydata__header-title {
+    margin-right: 32px;
+}
+
+.page-mydata {
+    text-align: center;
+}
+
+.page-mydata__title {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #2f2f2f;
+}
+
+.page-mydata__title span {
+    color: #9f9f9f;
+    font-weight: 400;
+}
+
+.page-mydata__title strong {
+    white-space: nowrap;
+}
+
+.page-mydata__form-inputs {
+    margin-bottom: 90px;
+}
+
+.page-mydata__form-inputs input {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+
+.page-mydata__form-inputs input:not(:last-child) {
+    margin-bottom: 40px;
+    color: #2f2f2f;
+    font-size: 18px;
+}
+
+.page-mydata__form-inputs input::-webkit-input-placeholder {
+    color: #afafaf;
+    font-size: 18px;
+}
+
+.page-mydata__form-inputs input::-moz-placeholder {
+    color: #afafaf;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 300px) {
+    .page-mydata__form-inputs input::-moz-placeholder {
+        font-size: 16px;
+    }
+    
+    .page-mydata__form-inputs input::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+}
+
+.page-mydata__form-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-mydata__form-buttons button {
+    width: 100%;
+    background: linear-gradient(to right, #fe8e04, #ef5b15);
+    padding: 12px 0;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+#mydata-user-exit {
+    width: 100%;
+    background: transparent;
+    padding: 12px 0;
+    color: #CC7240;
+    border: 2px solid #CC7240;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+#to-user-auth {
+    display: none;
+}
+
+#auth-close {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+#auth-close img {
+    width: 20px;
+    height: 20px;
+}
+
+.page-auth {
+    text-align: left;
+}
+
+.page-auth__title {
+    font-size: 32px;
+    color: #2f2f2f;
+    margin-bottom: 5px;
+}
+
+.page-auth__subtitle {
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.page-auth__subtitle-forgot {
+    color: #9f9f9f;
+}
+
+.page-auth__subtitle-reset {
+    color: #CC7240;
+}
+
+.page-auth__form-inputs {
+    margin-bottom: 40px;
+}
+
+.page-auth__form-inputs input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 10px;
+    color: #2f2f2f;
+    font-size: 24px;
+}
+
+.page-auth__form-inputs input:first-child {
+    margin-bottom: 30px;
+}
+
+#user-pass {
+    margin-bottom: 8px;
+}
+
+.page-auth__form-inputs small {
+    color: #9f9f9f;
+}
+
+.page-auth__form-inputs input::-webkit-input-placeholder {
+    color: #afafaf;
+    font-size: 18px;
+}
+
+.page-auth__form-inputs input::-moz-placeholder {
+    color: #afafaf;
+    font-size: 18px;
+}
+
+.page-auth__form-button {
+    width: 100%;
+    background: linear-gradient(to right, #fe8e04, #ef5b15);
+    padding: 12px 0;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.page-auth__form-button:disabled {
+    opacity: 0.5;
+}
+
+.page-mydata__button-submit:disabled {
+    opacity: 0.5;
+}
+
+#coupons {
+    background: transparent;
+}
+
+#coupons-window {
+    width: 100%;
+    min-height: 75vh;
+    max-height: 75vh;
+    padding: 18px 0px;
+    border-radius: 4px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 100%;
+    margin: auto;
+    display: none;
+    transition: ease 0.6s;
+    opacity: 0;
+    z-index: 50;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.page-coupons__blocked {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 51;
+}
+
+.page-coupons__header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.page-coupons__header-title {
+    color: #2f2f2f;
+    font-size: 18px;
+}
+
+#coupons-close {
+    width: 24px;
+    height: 24px;
+    top: -1px;
+    position: absolute;
+    font-size: 40px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+.page-coupons__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 101.5%;
+}
+
+.page-coupons__content-wrapper {
+    flex: 1 0 auto;
+}
+
+.page-coupons__content {
+    text-align: left;
+}
+
+.page-coupons__content-title {
+    color: #9f9f9f;
+    margin-bottom: 15px;
+}
+
+.page-coupons__content-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.page-coupons__item-left, .page-coupons__item-right {
+    background: #fff0e9;
+    border-radius: 10px;
+}
+
+.page-coupons__item-left {
+    width: 70%;
+    padding: 10px;
+    color: #CC7240;
+}
+
+.page-coupons__left-discount {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.page-coupons__left-description, .page-coupons__left-dates {
+    font-size: 14px;
+}
+
+.page-coupons__item-right {
+    width: 30%;
+    display: flex;
+    padding: 10px 10px 10px 0;
+}
+
+.page-coupons__right-border {
+    border-left: dashed #c7c7c7 0.5px;
+    color: transparent;
+}
+
+.page-coupons__right-block {
+    width: 100%;
+    position: relative;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-coupon__input {
+    display: none;
+}
+
+.page-coupons__right-button {
+    color: #fff0e9;
+    background-color: #ef5b15;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 11.5px 15px; 
+}
+
+.page-coupons__right-block .page-coupon__input:checked + label .page-coupons__right-button {
+    color: #CC7240;
+    background: #fff0e9;
+}
+
+.upper-block {
+    position: relative;
+}
+
+.user-not-auth {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}

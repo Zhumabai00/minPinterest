@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+    <title>Блеквайт</title>
+
+    <!-- шрифты -->
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div id="shadow"></div>
+    <header class="page-header categories-page__header">
+        <a href="./profile.html" class="page-header__button">
+            <img src="./img/back-index.svg" alt="etc">
+        </a>
+        <h3 class="page-header__title">Вопросы и ответы</h3>
+        <button class="page-header__button categories-page__header-button" id="burger">
+            <img src="./img/dots.svg" alt="etc">
+        </button>
+    </header>
+    <div id="burger-window">
+        <div class="burger-window__wrapper">
+            <div class="burger-window__content-wrapper">
+                <div class="burger-window__content">
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/link.svg" alt="Скопировать ссылку">
+                        <div class="burger-window__content-name">
+                            Копировать ссылку
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/share-detail.svg" alt="Поделиться">
+                        <div class="burger-window__content-name">
+                            Поделиться
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/home-button.svg" alt="Домой">
+                        <div class="burger-window__content-name">
+                            Домой
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/basket-burger.svg" alt="В корзину">
+                        <div class="burger-window__content-name">
+                            В корзину
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/support.svg" alt=" Написать тех. поддержке">
+                        <div class="burger-window__content-name">
+                            Контакты
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/question-2.svg" alt="Оставить обращение">
+                        <div class="burger-window__content-name">
+                            Оставить обращение
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-detail footer-open">
+                <div class="container footer__container footer-detail__container">
+                    <button type="button" id="burger-close">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="questions-page section__container">
+        <nav class="questions-page__navbar">
+            <button type="button" data-btn="questions-1"
+                class="questions-page__navbar-item toggle-button text-font-18 active">Топ 10 вопросов</button>
+            <button type="button" data-btn="questions-2"
+                class="questions-page__navbar-item toggle-button text-font-18">Способ оплаты</button>
+            <button type="button" data-btn="questions-3"
+                class="questions-page__navbar-item toggle-button text-font-18">Посылка</button>
+        </nav>
+        <div id="questions-1" class="questions-page__questions text-font-18 toggle-content active">
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как подобрать размер?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Где смотреть трек под посылки?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить заказ?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+        </div>
+        <div id="questions-2" class="questions-page__questions text-font-18 toggle-content">
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как подобрать размер?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Где смотреть трек под посылки?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить заказ?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+
+        </div>
+        <div id="questions-3" class="questions-page__questions text-font-18 toggle-content">
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+            <a href="./answer.html" class="questions-page__questions-question">
+                <div>Как оплатить доставку?</div>
+                <img src="./img/arrow.svg" alt="arrow">
+            </a>
+        </div>
+    </section>
+    <!-- jquery -->
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <!-- скрипты -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>

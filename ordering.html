@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+    <title>Блеквайт</title>
+
+    <!-- шрифты -->
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="shadow"></div>
+    <div id="address-window">
+        <header class="page-header page-header-light categories-page__header" style="background-color: #f2f2f2;">
+            <button id="close-address" class="page-header__button">
+                <img src="./img/back-index.svg" alt="etc">
+            </button>
+            <h3 class="page-header__title page-mydata__header-title">Добавить адрес</h3>
+            <div></div>
+        </header>
+        <div class="address-window__wrapper">
+            <form action="#" class="address-window__form">
+                <div class="address-window__form-items">
+                    <div class="address-window__form-item">
+                        <label for="fio" class="address-window__form-label text-font-18">ФИО</label>
+                        <div class="address-window__inputs-wrapper">
+                            <input id="fio" type="text" class="address-window__form-input" placeholder="Введите ФИО">
+                            <div class="address-window__img-wrapper">
+                                <img class="address-window__delete" src="./img/close.svg" alt="delete">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address-window__form-item" style="margin-top: 19px; margin-bottom: 19px;">
+                        <label for="phone" class="address-window__form-label text-font-18">Телефон</label>
+                        <div class="address-window__inputs-wrapper">
+                            <input id="phone" type="tel" class="address-window__form-input"
+                                placeholder="Номер WhatsApp">
+                            <div class="address-window__img-wrapper">
+                                <img class="address-window__delete" src="./img/close.svg" alt="delete">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address-window__form-item">
+                        <label for="address" class="address-window__form-label text-font-18">Адрес</label>
+                        <div class="address-window__inputs-wrapper">
+                            <textarea id="address" class="address-window__form-input padding__12" rows="4"
+                                placeholder="Введите полный адрес" style="padding-bottom: 12px;"></textarea>
+                            <div class="address-window__img-wrapper">
+                                <img class="address-window__delete" src="./img/close.svg" alt="delete">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address-window__form-inputs" style="margin-top: 19px;">
+                        <div class="address-window__form-item">
+                            <label for="height"
+                                class="address-window__form-label address-window__form-height text-font-18">Рост</label>
+                            <div style="position: relative;">
+                                <input id="height" type="number" maxlength="3" class="address-window__form-input"
+                                    placeholder="Рост">
+                                <div class="address-window__img-wrapper">
+                                    <img class="address-window__delete" src="./img/close.svg" alt="delete">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="address-window__form-item">
+                            <label for="weight" class="address-window__form-label text-font-18">Вес</label>
+                            <div style="position: relative;">
+                                <input id="weight" type="number" maxlength="2" class="address-window__form-input"
+                                    placeholder="Вес">
+                                <div class="address-window__img-wrapper">
+                                    <img class="address-window__delete" src="./img/close.svg" alt="delete">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="write-note__textarea-wrapper">
+                        <label for="note"
+                            class="address-window__form-label address-window__note-label text-font-18">Примечание</label>
+                        <textarea class="write-note__form-textarea" name="note" id="note" rows="13"
+                            placeholder="Комментарии к заказу" maxlength="200"></textarea>
+                        <div id="note-counter" class="write-note__form-counter">
+                            <span class="chars-current">0</span>/<span class="chars-total">200</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="address-window-button" class="address-window__form-button text-font-18"
+                    type="button">Продолжить</button>
+            </form>
+        </div>
+    </div>
+    <div id="payment-change-window" class="payment-change__window container section__container">
+        <div class="payment-change__window-header">
+            <div></div>
+            <div class="payment-change__header-title">
+                Способы оплаты
+            </div>
+            <img id="close-payment-change" src="./img/close-button.svg" alt="close">
+        </div>
+        <form action="#" class="payment-change__form" id="rd">
+            <label for="payment1" class="custom-radio payment-change__form-label">
+                <div class="payment-change__info">
+                    <img src="./img/wallet.svg" alt="wallet">
+                    <div class="payment-change__text text-font-16">
+                        Перевод на Kaspi Gold / Halyk / BCC
+                    </div>
+                </div>
+                <input class="ordering-page__window-radio check" type="checkbox" name="payment" id="payment1">
+                <span class="custom-checkbox-span"></span>
+            </label>
+            <label for="payment2" class="custom-radio payment-change__form-label">
+                <div class="payment-change__info">
+                    <img src="./img/wallet.svg" alt="wallet">
+                    <div class="payment-change__text text-font-16">
+                        <span>Оплата через Kaspi Red</span>
+                        <div class="payment-change__subtext text-font-14">
+                            (не действует купон)
+                        </div>
+                    </div>
+                </div>
+                <input class="ordering-page__window-radio check" type="checkbox" name="payment" id="payment2">
+                <span class="custom-checkbox-span"></span>
+            </label>
+        </form>
+        <hr class="waiting-page__hr">
+        <div class="payment-change__note text-font-14">
+            Предоплата 50 или 100%. Если предоплата 50%, то на почте добавляется 300 тенге комиссии. Полная оплата без
+            комиссии.
+        </div>
+    </div>
+    <div id="delivery-change-window" class="payment-change__window container section__container">
+        <div class="payment-change__window-header">
+            <div></div>
+            <div class="payment-change__header-title">
+                Доставка
+            </div>
+            <img id="close-delivery-change" src="./img/close-button.svg" alt="close">
+        </div>
+        <form action="#" class="delivery-change__form" id="radioButtonContainer">
+            <label for="delivery1" id="dev1" class="custom-radio delivery-change__form-label">
+                <div class="payment-change__info">
+                    <img src="./img/wallet.svg" alt="wallet">
+                    <div class="payment-change__text text-font-16">
+                        <span>Доставка Казпочтой</span>
+                        <div class="payment-change__subtext text-font-14">
+                            Срок доставки 4-5 рабочих дней - от 1200 тенге
+                        </div>
+                    </div>
+                </div>
+
+                <input class="ordering-page__window-radio check" type="checkbox" name="delivery" value="1200"
+                    id="delivery1">
+                <span class="custom-checkbox-span"></span>
+
+            </label>
+            <label for="delivery2" class="custom-radio delivery-change__form-label">
+                <div class="payment-change__info">
+                    <img src="./img/wallet.svg" alt="wallet">
+                    <div class="payment-change__text text-font-16">
+                        <span>Курьером по Алматы (внутри города)</span>
+                        <div class="payment-change__subtext text-font-14">
+                            Доставка до двери 3-4 дня - 1000 тенге
+                        </div>
+                    </div>
+                </div>
+                <input class="ordering-page__window-radio check" type="checkbox" name="delivery" value="1000"
+                    id="delivery2">
+                <span class="custom-checkbox-span"></span>
+            </label>
+            <label for="delivery3" class="custom-radio delivery-change__form-label">
+                <div class="payment-change__info">
+                    <img src="./img/wallet.svg" alt="wallet">
+                    <div class="payment-change__text text-font-16">
+                        <span>Курьером по Алматы (за городом)</span>
+                        <div class="payment-change__subtext text-font-14">
+                            Доставка до двери 3-4 дня - 1500 тенге
+                        </div>
+                    </div>
+                </div>
+                <input class="ordering-page__window-radio check" type="checkbox" name="delivery" value="1500"
+                    id="delivery3">
+                <span class="custom-checkbox-span"></span>
+            </label>
+
+            <label for="delivery4" class="custom-radio delivery-change__form-label">
+                <div class="payment-change__info">
+                    <img src="./img/wallet.svg" alt="wallet">
+                    <div class="payment-change__text text-font-16">
+                        <span>Самовывоз Алматы</span>
+                        <div class="payment-change__subtext text-font-14">
+                            Самовывоз в течение 3 дней. Адрес: Утеген батыра 17Б/1 - Бесплатно
+                        </div>
+                    </div>
+                </div>
+                <input class="ordering-page__window-radio check" type="radio" name="delivery" value="1500"
+                    id="delivery4">
+                <span class="custom-checkbox-span"></span>
+            </label>
+        </form>
+    </div>
+    <header class="page-header categories-page__header">
+        <a href="./basket.html" class="page-header__button">
+            <img src="./img/back-index.svg" alt="etc">
+        </a>
+        <h3 class="page-header__title header-margin">Оформление заказа</h3>
+        <div></div>
+    </header>
+    <section id="to-adress-window" class="container section__container ordering-page__block">
+        <div class="ordering-page__block-column">
+            <img class="ordering-page__block-image" src="./img/location.svg" alt="">
+            <div class="ordering-page__block-text ordering-page__block-address text-font-18">
+                Добавить адрес
+            </div>
+            <div class="ordering-page__address-wrapper">
+                <div class="ordering-page__block-text ordering-page__address text-font-18"></div>
+                <div class="ordering-page__address-block text-font-16">
+                    <div class="ordering-page__name"></div>
+                    <span class="order-page__user-phone"></span>
+                </div>
+            </div>
+        </div>
+        <div class="ordering-page__block-column">
+            <img class="ordering-page__block-arrow" src="./img/arrow.svg" alt="">
+        </div>
+    </section>
+    <section class="container section__container ordering-page__block" id="to-delivery-window">
+        <div class="ordering-page__block-column">
+            <img class="ordering-page__block-image" src="./img/wallet.svg" alt="">
+            <div id="change-delivery-name" class="ordering-page__block-text ordering-text__short text-font-18">
+                Доставка
+            </div>
+        </div>
+        <div class="ordering-page__block-column">
+            <div id="change-delivery-subtext" class="ordering-page__block-subtext text-font-16">
+                Выбрать
+            </div>
+            <img class="ordering-page__block-arrow" src="./img/arrow.svg" alt="">
+        </div>
+    </section>
+    <section id="to-change-payment" class="container section__container ordering-page__block">
+        <div class="ordering-page__block-column">
+            <img class="ordering-page__block-image" src="./img/wallet.svg" alt="">
+            <div id="change-payment-name" class="ordering-page__block-text ordering-text__short text-font-18">
+                Способ оплаты
+            </div>
+        </div>
+        <div class="ordering-page__block-column">
+            <div id="change-payment-subtext" class="ordering-page__block-subtext text-font-16">
+                Выбрать
+            </div>
+            <img class="ordering-page__block-arrow" src="./img/arrow.svg" alt="">
+        </div>
+    </section>
+    <section class="container section__container">
+        <div class="ordering-page__products">
+            <div class="ordering-page__products-item">
+                <div class="ordering-page__products-string">
+                    <img class="ordering-page__products-image" src="./img/1.jpg" alt="product">
+                    <div class="ordering-page__products-info">
+                        <div class="ordering-page__products-block">
+                            <div class="ordering-page__products-name text-font-16">
+                                Футболка с надписью корейский стиль 2021
+                            </div>
+                            <div class="ordering-page__products-price text-font-14">
+                                1000 <span class="price-tenge-14 text-font-14">₸</span>
+                            </div>
+                        </div>
+                        <div class="ordering-page__products-features text-font-16">
+                            Цвет: <span id="product-color">Синий</span>; <span id="product-size">XL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ordering-page__counter-block">
+                    <div class="ordering-page__item-counter">
+                        <button class="ordering-page_product-minus ordering-page_product-config">-</button>
+                        <input id="product1" class="ordering-page__item-value" type="text" readonly name="product"
+                            value="1">
+                        <button class="ordering-page__product-plus ordering-page_product-config">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ordering-page__products-item">
+                <div class="ordering-page__products-string">
+                    <img class="ordering-page__products-image" src="./img/2.jpg" alt="product">
+                    <div class="ordering-page__products-info">
+                        <div class="ordering-page__products-block">
+                            <div class="ordering-page__products-name text-font-16">
+                                Футболка с надписью корейский стиль 2021
+                            </div>
+                            <div class="ordering-page__products-price text-font-14">
+                                1300 <span class="price-tenge-14 text-font-14">₸</span>
+                            </div>
+                        </div>
+                        <div class="ordering-page__products-features text-font-16">
+                            Цвет: <span id="product-color">Синий</span>; <span id="product-size">XL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ordering-page__counter-block">
+                    <div class="ordering-page__item-counter">
+                        <button class="ordering-page_product-minus ordering-page_product-config">-</button>
+                        <input id="product2" class="ordering-page__item-value" type="text" readonly name="product"
+                            value="1">
+                        <button class="ordering-page__product-plus ordering-page_product-config">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ordering-page__products-item">
+                <div class="ordering-page__products-string">
+                    <img class="ordering-page__products-image" src="./img/3.jpg" alt="product">
+                    <div class="ordering-page__products-info">
+                        <div class="ordering-page__products-block">
+                            <div class="ordering-page__products-name text-font-16">
+                                Футболка с надписью корейский стиль 2021
+                            </div>
+                            <div class="ordering-page__products-price text-font-14">
+                                1000 <span class="price-tenge-14 text-font-14">₸</span>
+                            </div>
+                        </div>
+                        <div class="ordering-page__products-features text-font-16">
+                            Цвет: <span id="product-color">Синий</span>; <span id="product-size">XL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ordering-page__counter-block">
+                    <div class="ordering-page__item-counter">
+                        <button class="ordering-page_product-minus ordering-page_product-config">-</button>
+                        <input id="product3" class="ordering-page__item-value" type="text" readonly name="product"
+                            value="1">
+                        <button class="ordering-page__product-plus ordering-page_product-config">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ordering-page__block ordering-page__buttons">
+            <div class="ordering-page__block-column">
+                <div class="ordering-page__block-text text-font-18">
+                    Промокод
+                </div>
+            </div>
+            <div class="ordering-page__block-column">
+                <div class="ordering-page__block-subtext text-font-16">
+                    Добавить промокод
+                </div>
+                <img class="ordering-page__block-arrow" src="./img/arrow.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="container section__container">
+        <div class="ordering-page__payinfo-title text-font-18">
+            Информация об оплате
+        </div>
+        <div class="ordering-page__block ordering-page__buttons">
+            <div class="ordering-page__block-column">
+                <div class="ordering-page__block-text text-font-18">
+                    <!-- <span id="products-value">2</span> --> Стоимость товаров
+                </div>
+            </div>
+            <div class="ordering-page__block-column ordering-page__block-text ordering-page__block-bold text-font-18"">
+                <span id=" full-products-price">1000 </span>&nbsp<span class="price-tenge text-font-14">₸</span>
+            </div>
+        </div>
+        <div class="ordering-page__block ordering-page__buttons">
+            <div class="ordering-page__block-column">
+                <div class="ordering-page__block-text text-font-18">
+                    Доставка
+                </div>
+            </div>
+            <div class="ordering-page__block-column ordering-page__block-text ordering-page__block-bold text-font-18">
+                <span id="delivery-price">300 </span>&nbsp<span
+                    class="price-tenge text-font-14 ordering-total-price-tenge">₸</span>
+            </div>
+        </div>
+        <hr class="waiting-page__hr">
+        <div class="ordering-page__block ordering-page__buttons">
+            <div class="ordering-page__block-column">
+                <div class="ordering-page__block-text text-font-18">
+                    К оплате
+                </div>
+            </div>
+            <div class="ordering-page__block-column ordering-page__block-text ordering-page__block-bold text-font-18">
+                <span class="all-price" id="full-ordering-total-price">1000 </span>&nbsp<span
+                    class="price-tenge ordering-total-price-tenge" id="ordering-total-price-tenge">₸</span>
+            </div>
+        </div>
+    </section>
+    <footer class="footer ordering-page__footer"
+        style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="ordering-page__total-price text-font-16">
+            Итого:&nbsp
+            <span id="full-all-price" class="all-price text-font-18">2000</span>&nbsp<span
+                class="price-tenge text-font-14 ordering-total-price-tenge">₸</span>
+        </div>
+        <a class="ordering-page__footer-button text-font-18" href="ok.html">Подтвердить заказ</a>
+    </footer>
+    <!-- jquery -->
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <!-- скрипты -->
+    <script src="./script/basket.js"></script>
+    <script src="./script/masks.js"></script>
+</body>
+
+</html>

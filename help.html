@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+  <title>Блеквайт</title>
+
+  <!-- шрифты -->
+  <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+  <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+  <!-- стили -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main>
+    <section class="help-size">
+      <div class="container help-size__row-1">
+        <div class="help-size__header">
+          <a href="/" class="help-size__back"></a>
+          <h2 class="section__title help-size__title">Справка размера</h2>
+        </div>
+      </div>
+      <div class="container help-size__row-2">
+        <div class="help-size__edit">Изменить</div>
+        <div class="help-size__type">
+          <button type="button">Местный размер</button>
+          <div class="help-size__radio-group">
+            <div class="help-size__radio item-1">
+              <input id="size-cm" type="radio" name="size-type" value="cm" checked />
+              <label for="size-cm">CM</label>
+            </div>
+            <div class="help-size__radio item-2">
+              <input id="size-in" type="radio" name="size-type" value="in" />
+              <label for="size-in">IN</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container help-size__row-3">
+        <div class="help-size__table">
+          <table>
+            <caption>Изменение Товаров</caption>
+            <thead>
+              <tr>
+                <th>Размер</th>
+                <th>Бюст</th>
+                <th>Обхват талии</th>
+                <th>Окружность бедер</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>XS</td>
+                <td>69.5</td>
+                <td>64</td>
+                <td>83.5</td>
+              </tr>
+              <tr>
+                <td>S</td>
+                <td>73.5</td>
+                <td>68</td>
+                <td>87.5</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td>77.5</td>
+                <td>72</td>
+                <td>91.5</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td>83.5</td>
+                <td>78</td>
+                <td>97.5</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="help-size__table-desc">
+            * Эти данные были получены при ручном измерении изделия, изменения
+            могут отклоняться на 1-2 см.
+          </div>
+          <div class="help-size__how">
+            <details>
+              <summary>Как измерить размер товара?</summary>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Corrupti
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+      <div class="container help-tab__row-4">
+        <h2 class="section__title help-tab__title">Мерки</h2>
+        <div class="help-tab__block">
+          <input type="radio" name="select-size" id="select-xs" value="" checked />
+          <label for="select-xs">XS</label>
+          <input type="radio" name="select-size" id="select-s" value="" />
+          <label for="select-s">S</label>
+          <input type="radio" name="select-size" id="select-m" value="" />
+          <label for="select-m">M</label>
+
+          <input type="radio" name="select-size" id="select-l" value="" />
+          <label for="select-l">L</label>
+
+          <input type="radio" name="select-size" id="select-xl" value="" />
+          <label for="select-xl">XL</label>
+
+          <div class="help-tab__content" id="content-1">
+            <span class="bust">1. Бюст: 82-86 cm</span>
+            <span class="waist">2. Обхват талии: 62-66 cm</span>
+          </div>
+          <div class="help-tab__content" id="content-2">
+            <span class="bust">1. Бюст: 82-86 cm</span>
+            <span class="waist">2. Обхват талии: 62-66 cm</span>
+          </div>
+          <div class="help-tab__content" id="content-3">
+            <span class="bust">1. Бюст: 186 cm</span>
+            <span class="waist">2. Обхват талии: 6767cm</span>
+          </div>
+          <div class="help-tab__content" id="content-4">
+            <span class="bust">1. Бюст: 767 cm</span>
+            <span class="waist">2. Обхват талии: 6767 cm</span>
+          </div>
+          <div class="help-tab__content" id="content-5">
+            <span class="bust">1. Бюст: 87676 cm</span>
+            <span class="waist">2. Обхват талии: 67676 cm</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer-detail">
+    <div class="container footer__container footer-detail__container">
+      <button type="button" class="footer-detail__btn sale">Купить</button>
+      <button type="button" class="footer-detail__btn basket help__basket">
+        В корзину
+      </button>
+    </div>
+  </footer>
+  <!-- jquery -->
+  <script src="script/jquery-3.6.0.min.js"></script>
+  <!-- слайдер -->
+  <script src="script/slick.min.js"></script>
+  <!-- скрипты -->
+  <script src="script/script.js"></script>
+</body>
+
+</html>

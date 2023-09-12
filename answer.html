@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+    <title>Блеквайт</title>
+
+    <!-- шрифты -->
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body class="body-white">
+    <div id="shadow"></div>
+    <header class="page-header page-header-light categories-page__header">
+        <a href="./questions.html" class="page-header__button">
+            <img src="./img/back-index.svg" alt="etc">
+        </a>
+        <h3 class="page-header__title">Топ 10 вопросов</h3>
+        <button class="page-header__button categories-page__header-button" id="burger">
+            <img src="./img/dots.svg" alt="etc">
+        </button>
+    </header>
+    <div id="burger-window">
+        <div class="burger-window__wrapper">
+            <div class="burger-window__content-wrapper">
+                <div class="burger-window__content">
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/link.svg" alt="Скопировать ссылку">
+                        <div class="burger-window__content-name">
+                            Копировать ссылку
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/share-detail.svg" alt="Поделиться">
+                        <div class="burger-window__content-name">
+                            Поделиться
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/home-button.svg" alt="Домой">
+                        <div class="burger-window__content-name">
+                            Домой
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/basket-burger.svg" alt="В корзину">
+                        <div class="burger-window__content-name">
+                            В корзину
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/support.svg" alt=" Написать тех. поддержке">
+                        <div class="burger-window__content-name">
+                            Контакты
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/question-2.svg" alt="Оставить обращение">
+                        <div class="burger-window__content-name">
+                            Оставить обращение
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-detail footer-open">
+                <div class="container footer__container footer-detail__container">
+                    <button type="button" id="burger-close">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="answer-page section__container">
+        <div class="answer-page__row answer-page__question-row">
+            <div class="question-row__name">
+                Q:
+            </div>
+            <div class="question-row__text text-font-18">
+                Как узнать трек код посылки?
+            </div>
+        </div>
+        <div class="answer-page__row answer-page__answer-row">
+            <div class="answer-row__name">
+                A:
+            </div>
+            <div class="answer-row__text text-font-16">
+                Трек-номер посылки менеджеры отправят на whatsapp или самостоятельно отследить перемещение посылки в
+                профиле в “Мои заказы”.
+            </div>
+        </div>
+        <div class="answer-page__rating">
+            <div class="answer-page__rating-title text-font-16">
+                Для вас ответ оказался полезным?
+            </div>
+            <div class="answer-page__rating-buttons">
+                <button type="button" class="rating-buttons__like">
+                    <img src="./img/rating.svg" alt="like">
+                    <div class="rating-buttons__text">Да</div>
+                </button>
+                <button type="button" class="rating-buttons__like">
+                    <img src="./img/rating.svg" class="rating-buttons__dislike" alt="like">
+                    <div class="rating-buttons__text">Нет</div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- jquery -->
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <!-- скрипты -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>

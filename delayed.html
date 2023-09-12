@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+    <title>Блеквайт</title>
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="delayed-page__window">
+        <div class="delayed-page__window-all">
+            <input class="delayed-page__item-all custom-checkbox-2" type="checkbox" name="delayed-product"
+                id="delayed-product-all">
+            <label class="select-all"">Все</label>
+        </div>
+        <button type=" button" class="delayed-page__window-remove">
+                Удалить
+                </button>
+        </div>
+        <div class="page-header__wrapper-fixed">
+            <header class="page-header categories-page__header" style="height: 55.67px;">
+                <a href="./profile.html" class="page-header__button">
+                    <img src="./img/back-index.svg" alt="etc">
+                </a>
+                <h3 class="page-header__title delayed-page__title text-font-18">Отложенные <span
+                        id="delayed-counter"></span></h3>
+                <button class="page-header__button categories-page__header-button text-font-16" id="delayed-edit">
+                    Править
+                </button>
+            </header>
+        </div>
+        <div class="section__container">
+            <section class="delayed-page">
+                <div class="delayed-page__zero">
+                    <img src="./img/folder-open.svg" alt="no delayed">
+                    <div class="delayed-page__zero-title">
+                        Нет отложенных товаров
+                    </div>
+                </div>
+                <label class="delayed-page__item custom-checkbox" for="delayed-product1">
+                    <input class="delayed-page__item-input checkboxes" type="checkbox" name="delayed-product"
+                        id="delayed-product1">
+                    <span class="custom-checkbox-span"></span>
+                    <img src="./img/1.jpg" alt="product">
+                    <div class="delayed-page__item-content">
+                        <div class="delayed-page__item-name text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="delayed-page__item-recalls text-font-16">
+                            1000 отзывов
+                        </div>
+                        <div class="delayed-page__item-price text-font-18">
+                            1 390 тг
+                        </div>
+                    </div>
+                    <div class="delayed-page__item-delete text-font-14">
+                        Удалить
+                    </div>
+                </label>
+                <label class="delayed-page__item custom-checkbox" for="delayed-product2">
+                    <input class="delayed-page__item-input checkboxes" type="checkbox" name="delayed-product"
+                        id="delayed-product2">
+                    <span class="custom-checkbox-span"></span>
+                    <img src="./img/3.jpg" alt="product">
+                    <div class="delayed-page__item-content">
+                        <div class="delayed-page__item-name text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="delayed-page__item-recalls text-font-16">
+                            1000 отзывов
+                        </div>
+                        <div class="delayed-page__item-price text-font-18">
+                            1 390 тг
+                        </div>
+                    </div>
+                    <div class="delayed-page__item-delete text-font-14">
+                        Удалить
+                    </div>
+                </label>
+                <label class="delayed-page__item custom-checkbox" for="delayed-product3">
+                    <input class="delayed-page__item-input checkboxes" type="checkbox" name="delayed-product"
+                        id="delayed-product3">
+                    <span class="custom-checkbox-span"></span>
+                    <img src="./img/2.jpg" alt="product">
+                    <div class="delayed-page__item-content">
+                        <div class="delayed-page__item-name text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="delayed-page__item-recalls text-font-16">
+                            1000 отзывов
+                        </div>
+                        <div class="delayed-page__item-price text-font-18">
+                            1 390 тг
+                        </div>
+                    </div>
+                    <div class="delayed-page__item-delete text-font-14">
+                        Удалить
+                    </div>
+                </label>
+            </section>
+            <section class="foryou">
+                <h2 class="section__title profile-page__foryou-title detail-page__foryou-title">
+                    Подобрано для Вас
+                </h2>
+                <div class="subcategories-page__products-wrapper active">
+                    <div class="page-products__col page-products__col-left">
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/100.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/101.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/102.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/103.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="page-products__col page-products__col-right">
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/104.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/105.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/106.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/108.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- jquery -->
+        <script src="script/jquery-3.6.0.min.js"></script>
+        <!-- скрипты -->
+        <script src="script/script.js"></script>
+        <script src="./script/checkboxes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Блеквайт</title>
+
+  <!-- стили -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />\
+</head>
+
+<body class="body-detail">
+  <div id="shadow"></div>
+  <div id="shadow-dark"></div>
+  <div id="shadow-dark-2">
+    <span id="add-basket__color-close"><img src="./img/close-button-white.svg" alt=""></span>
+    <div class="detail-page__dots-color swiper-pagination"></div>
+  </div>
+  <div id="shadow-dark-3">
+    <div class="detail-page__slide-window-menu">
+      <span id="detail-page__slide-close"><img src="./img/close-button-white.svg" alt=""></span>
+      <div class="detail-page__dots detail-page__slide-dots swiper-pagination"></div>
+    </div>
+  </div>
+  <div id="shadow-dark-4">
+    <span id="detail-page__info-img-close"><img src="./img/close-button-white.svg" alt=""></span>
+    <div class="detail-page__dots-add detail-page__slide-dots">
+      <span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">4</span>
+    </div>
+  </div>
+  <div class="done-basket" id="done">
+    <img src="./img/done.svg" alt="Добавлено">
+    Товар добавлен в корзину
+  </div>
+  <div class="done-basket" id="done-favorites">
+    <img src="./img/done.svg" alt="Добавлено">
+    Товар добавлен в избранное
+  </div>
+  <div class="page-wrapper">
+
+    <!-- <div class="page-header__wrapper" id="header-hide">
+        <header class="page-header subcategories-page__header">
+          <a href="./index.html" class="page-header__button">
+              <img src="./img/back-index.svg" alt="etc">
+          </a>
+          <form action="" class="page-header__form">
+              <button class="page-header__form-button">
+
+              </button>
+              <input type="search" class="page-header__form-input" placeholder="Поиск">
+          </form>
+          <button class="page-header__button" id="burger">
+            <img src="./img/basket-header.svg" alt="etc">
+            <div class="basket-counter" id="basket-counter">
+              <span id="counter" class="counter"></span>
+            </div>
+          </button>
+          <button class="page-header__button" id="burger">
+              <img src="./img/dots.svg" alt="etc">
+          </button>
+        </header>
+      </div> -->
+
+    <header class="page-header header-top" id="header-hide">
+      <a href="./index.html" class="page-header__button">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M8.43971 14.9378L16.9371 6.44049C17.5244 5.85317 18.4741 5.85317 19.0551 6.44049L20.4672 7.85255C21.0545 8.43986 21.0545 9.38957 20.4672 9.97063L14.4503 16L20.4735 22.0231C21.0608 22.6104 21.0608 23.5601 20.4735 24.1412L19.0614 25.5595C18.4741 26.1468 17.5244 26.1468 16.9433 25.5595L8.44596 17.0622C7.85239 16.4749 7.85239 15.5251 8.43971 14.9378Z" />
+        </svg>
+      </a>
+
+      <form action="" class="page-header__form" style="opacity: 0;">
+        <button class="page-header__form-button">
+
+        </button>
+        <input type="search" class="page-header__form-input" placeholder="Поиск">
+      </form>
+      <div class="page-header__like">
+        <button class="page-header__button__like" id="">
+          <!-- Here -->
+          <span class="page-header__button__like-span" style="" class="icon" id="favorites"><img
+              src="./img/heart-like.svg" id="favorites-img" alt="Избранное"></span>
+        </button>
+
+      </div>
+      <!-- <button class="page-header__button" id="burger">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="15" fill="none" stroke="transparent" fill-opacity="0" />
+          <path
+            d="M24.0202 19.6318L24.0202 19.6318C23.9879 19.774 23.8614 19.875 23.7155 19.875H12.2645H11.4988L11.6522 20.6252L11.9079 21.8752L12.0101 22.375H12.5202H23.0053C23.2058 22.375 23.3544 22.5612 23.31 22.7568L23.0945 23.705L22.9845 24.1891L23.431 24.4058C23.9541 24.6597 24.3125 25.1949 24.3125 25.8125C24.3125 26.6754 23.613 27.375 22.75 27.375C21.8871 27.375 21.1875 26.6754 21.1875 25.8125C21.1875 25.3754 21.3665 24.9811 21.657 24.6965L22.7507 23.625H21.2197H13.0303H11.4991L12.593 24.6965C12.8835 24.9811 13.0625 25.3754 13.0625 25.8125C13.0625 26.6754 12.3629 27.375 11.5 27.375C10.6371 27.375 9.9375 26.6754 9.9375 25.8125C9.9375 25.2339 10.2521 24.728 10.723 24.4572L11.1141 24.2323L11.0237 23.7902L8.27963 10.3748L8.17741 9.875H7.66731H4.9375C4.7649 9.875 4.625 9.7351 4.625 9.5625V8.9375C4.625 8.7649 4.7649 8.625 4.9375 8.625H8.94254C9.09102 8.625 9.21896 8.72947 9.24869 8.87483L9.2487 8.87486L9.60674 10.6253L9.70897 11.125H10.2191H25.5621C25.7626 11.125 25.9113 11.3112 25.8668 11.5068L24.0202 19.6318Z"
+            stroke="#000" stroke-width="1.25" />
+        </svg>
+        <div class="basket-counter" id="basket-counter">
+          <span id="counter" class="counter"></span>
+        </div>
+      </button> -->
+      <button class="page-header__button" id="burger">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+          viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+          <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="" stroke="none">
+            <path d="M841 3024 c-253 -68 -410 -331 -346 -579 67 -256 329 -415 580 -350
+         190 50 330 207 358 401 48 331 -270 615 -592 528z" />
+            <path d="M2441 3024 c-253 -68 -410 -331 -346 -579 67 -256 329 -415 580 -350
+         190 50 330 207 358 401 48 331 -270 615 -592 528z" />
+            <path d="M4041 3024 c-253 -68 -410 -331 -346 -579 67 -256 329 -415 580 -350
+         190 50 330 207 358 401 48 331 -270 615 -592 528z" />
+          </g>
+        </svg>
+      </button>
+
+    </header>
+
+    <main class="detail-page__main">
+      <div id="burger-window">
+        <div class="burger-window__wrapper">
+          <div class="burger-window__content-wrapper">
+            <div class="burger-window__content">
+              <a href="#" class="burger-window__content-item">
+                <img src="img/link.svg" alt="Скопировать ссылку">
+                <div class="burger-window__content-name">
+                  Копировать ссылку
+                </div>
+              </a>
+              <a href="#" class="burger-window__content-item">
+                <img src="img/share-detail.svg" alt="Поделиться">
+                <div class="burger-window__content-name">
+                  Поделиться
+                </div>
+              </a>
+              <a href="#" class="burger-window__content-item">
+                <img src="img/home-button.svg" alt="Домой">
+                <div class="burger-window__content-name">
+                  Домой
+                </div>
+              </a>
+              <a href="#" class="burger-window__content-item">
+                <img src="img/basket-burger.svg" alt="В корзину">
+                <div class="burger-window__content-name">
+                  В корзину
+                </div>
+              </a>
+              <a href="#" class="burger-window__content-item">
+                <img src="img/support.svg" alt=" Написать тех. поддержке">
+                <div class="burger-window__content-name">
+                  Контакты
+                </div>
+              </a>
+              <a href="#" class="burger-window__content-item">
+                <img src="img/question-2.svg" alt="Оставить обращение">
+                <div class="burger-window__content-name">
+                  Оставить обращение
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="footer-detail footer-open">
+            <div class="container footer__container footer-detail__container">
+              <button type="button" id="burger-close">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="detail-page">
+        <!-- слайдер изображений -->
+        <div class="detail-page__img">
+          <div id="detail-page__slide-window">
+            <div class="detail-page__slider-window slider-connect swiper">
+              <div class="swiper-wrapper">
+                <div class="slide-item swiper-slide">
+                  <img src="img/21.jpg" alt="Слайд 1" />
+                </div>
+                <div class="slide-item swiper-slide">
+                  <img src="img/13.jpg" alt="Слайд 2" />
+                </div>
+                <div class="slide-item swiper-slide">
+                  <img src="img/10.jpg" alt="Слайд 3" />
+                </div>
+                <div class="slide-item swiper-slide">
+                  <img src="img/8.jpg" alt="Слайд 4" />
+                </div>
+                <div class="slide-item swiper-slide">
+                  <img src="img/1.jpg" alt="Слайд 5" />
+                </div>
+              </div>
+            </div>
+            <div class="detail-page__slide-content">
+              <div class="detail-page__desc-name">
+                Короткая куртка с утолщением из бархата, весна 2021
+              </div>
+              <div class="detail-page__desc-price">
+                <span class="new">10 500 тг.</span>
+                <span class="old">10 500 тг.</span>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" id="tab1">
+            <div class="detail-page__slider slider-connect swiper">
+              <div class="swiper-wrapper new">
+                <div class="slide-item swiper-slide" data-num="0">
+                  <img src="img/21.jpg" alt="Слайд 1" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="1">
+                  <img src="img/13.jpg" alt="Слайд 2" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="2">
+                  <img src="img/10.jpg" alt="Слайд 3" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="3">
+                  <img src="img/8.jpg" alt="Слайд 4" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="4">
+                  <img src="img/1.jpg" alt="Слайд 5" />
+                </div>
+              </div>
+              <div class="detail-page__dots swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="tab-content" id="tab2">
+            <div class="detail-page__slider slider-connect swiper">
+              <div class="swiper-wrapper new">
+                <div class="slide-item swiper-slide" data-num="0">
+                  <img src="img/23.jpg" alt="Слайд 1" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="1">
+                  <img src="img/13.jpg" alt="Слайд 2" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="2">
+                  <img src="img/10.jpg" alt="Слайд 3" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="3">
+                  <img src="img/8.jpg" alt="Слайд 4" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="4">
+                  <img src="img/1.jpg" alt="Слайд 5" />
+                </div>
+              </div>
+              <div class="detail-page__dots swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="tab-content" id="tab3">
+            <div class="detail-page__slider slider-connect swiper">
+              <div class="swiper-wrapper new">
+                <div class="slide-item swiper-slide" data-num="0">
+                  <img src="img/15.jpg" alt="Слайд 1" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="1">
+                  <img src="img/13.jpg" alt="Слайд 2" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="2">
+                  <img src="img/10.jpg" alt="Слайд 3" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="3">
+                  <img src="img/8.jpg" alt="Слайд 4" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="4">
+                  <img src="img/1.jpg" alt="Слайд 5" />
+                </div>
+              </div>
+              <div class="detail-page__dots swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="tab-content" id="tab4">
+            <div class="detail-page__slider slider-connect swiper">
+              <div class="swiper-wrapper new">
+                <div class="slide-item swiper-slide" data-num="0">
+                  <img src="img/21.jpg" alt="Слайд 1" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="1">
+                  <img src="img/13.jpg" alt="Слайд 2" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="2">
+                  <img src="img/10.jpg" alt="Слайд 3" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="3">
+                  <img src="img/8.jpg" alt="Слайд 4" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="4">
+                  <img src="img/1.jpg" alt="Слайд 5" />
+                </div>
+              </div>
+              <div class="detail-page__dots swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="tab-content" id="tab5">
+            <div class="detail-page__slider slider-connect swiper">
+              <div class="swiper-wrapper new">
+                <div class="slide-item swiper-slide" data-num="0">
+                  <img src="img/23.jpg" alt="Слайд 1" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="1">
+                  <img src="img/13.jpg" alt="Слайд 2" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="2">
+                  <img src="img/10.jpg" alt="Слайд 3" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="3">
+                  <img src="img/8.jpg" alt="Слайд 4" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="4">
+                  <img src="img/1.jpg" alt="Слайд 5" />
+                </div>
+              </div>
+              <div class="detail-page__dots swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="tab-content" id="tab6">
+            <div class="detail-page__slider slider-connect swiper">
+              <div class="swiper-wrapper new">
+                <div class="slide-item swiper-slide" data-num="0">
+                  <img src="img/15.jpg" alt="Слайд 1" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="1">
+                  <img src="img/13.jpg" alt="Слайд 2" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="2">
+                  <img src="img/10.jpg" alt="Слайд 3" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="3">
+                  <img src="img/8.jpg" alt="Слайд 4" />
+                </div>
+                <div class="slide-item swiper-slide" data-num="4">
+                  <img src="img/1.jpg" alt="Слайд 5" />
+                </div>
+              </div>
+              <div class="detail-page__dots swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <!-- описание товара -->
+        <div class="detail-page__desc">
+          <div class="container little-slider__body">
+            <div class="js-swiper-slides-per-view swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide little-slider" onclick="openTab(event, 'tab1')">
+                  <div class="little-slider-img">
+                    <img class="img-fluid" src="./img/18.jpg" alt="Image Description">
+                  </div>
+                  <div class="little-slider-text">
+                    <p>Lorem ipsum</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide little-slider" onclick="openTab(event, 'tab2')">
+                  <div class="little-slider-img">
+                    <img class="img-fluid" src="./img/22.jpg" alt="Image Description">
+                  </div>
+                  <div class="little-slider-text">
+                    <p>Lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="swiper-slide little-slider" onclick="openTab(event, 'tab3')">
+                  <div class="little-slider-img">
+                    <img class="img-fluid" src="./img/23.jpg" alt="Image Description">
+                  </div>
+                  <div class="little-slider-text">
+                    <p>Lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="swiper-slide little-slider tab-button" onclick="openTab(event, 'tab4')">
+                  <div class="little-slider-img">
+                    <img class="img-fluid" src="./img/18.jpg" alt="Image Description">
+                  </div>
+                  <div class="little-slider-text">
+                    <p>Lorem ipsum</p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide little-slider" onclick="openTab(event, 'tab5')">
+                  <div class="little-slider-img">
+                    <img class="img-fluid" src="./img/22.jpg" alt="Image Description">
+                  </div>
+                  <div class="little-slider-text">
+                    <p>Lorem ipsum</p>
+                  </div>
+                </div>
+                <div class="swiper-slide little-slider" onclick="openTab(event, 'tab6')">
+                  <div class="little-slider-img">
+                    <img class="img-fluid" src="./img/23.jpg" alt="Image Description">
+                  </div>
+                  <div class="little-slider-text">
+                    <p>Lorem ipsum</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container section__container detail-page__desc-container">
+            <div class="detail-page__desc-top">
+              <div class="detail-page__desc-price">
+                <span class="new">10 500 тг.</span>
+                <span class="old">10 500 тг.</span>
+              </div>
+              <small>Купили более <br> <span>2 000 раз</span></small>
+            </div>
+            <!-- Need Change -->
+            <div class="detail-page__desc-bottom">
+              <div class="detail-page__desc-name section__title">
+                Короткая куртка с утолщением из бархата, весна 2021
+              </div>
+              <!-- <span class="icon" id="favorites"><img src="./img/like.svg" id="favorites-img" alt="Избранное"></span> -->
+            </div>
+          </div>
+        </div>
+        <!-- характеристики товара -->
+        <div class="detail-page__params">
+          <div class="container section__container detail-page__params-container">
+            <div class="container add-basket__row-2">
+              <div class="add-basket__row-2-header">
+                <div class="add-basket__size-title text-font-16">Размеры</div>
+                <a href="help.html" class="add-basket__tab-link text-font-16">
+                  Таблица размеров
+                </a>
+              </div>
+              <div class="add-basket__size-block">
+                <div class="add-basket__size-btn">
+                  <input id="size-m" type="radio" name="size" value="75~90" data-btn="size-m" />
+                  <label for="size-m" class="text-font-16">M 75~90</label>
+                </div>
+                <div class="add-basket__size-btn">
+                  <input id="size-l" type="radio" name="size" value="91~110" data-btn="size-l" />
+                  <label for="size-l" class="text-font-16">L 91~110</label>
+                </div>
+                <div class="add-basket__size-btn">
+                  <input id="size-xl" type="radio" name="size" value="111~125" data-btn="size-xl" />
+                  <label for="size-xl" class="text-font-16">XL 111~125</label>
+                </div>
+                <div class="add-basket__size-btn">
+                  <input id="size-xxl" type="radio" name="size" value="126~140" data-btn="size-xxl" />
+                  <label for="size-xxl" class="text-font-16">2XL 126~140</label>
+                </div>
+              </div>
+              <div class="add-basket__tab">
+                <div class="add-basket__tab-content text-font-14" id="size-m">
+                  <div class="add-basket__tab-title">Изменения Товаров</div>
+                  <ul class="add-basket__tab-list">
+                    <li class="add-basket__tab-item">
+                      Плечо:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Бюст:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Обхват талии:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Длина брюк:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Длина рукава:
+                      <span>35cm</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="add-basket__tab-content text-font-14" id="size-l">
+                  <div class="add-basket__tab-title">Изменения Товаров</div>
+                  <ul class="add-basket__tab-list">
+                    <li class="add-basket__tab-item">
+                      Плечо:
+                      <span>35cm</span>
+                    </li>
+
+                    <li class="add-basket__tab-item">
+                      Обхват талии:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Окружность бедра:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Длина Топа:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Длина брюк:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Длина рукава:
+                      <span>35cm</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="add-basket__tab-content text-font-14" id="size-xl">
+                  <div class="add-basket__tab-title">Изменения Товаров</div>
+                  <ul class="add-basket__tab-list">
+                    <li class="add-basket__tab-item">
+                      Плечо:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Бюст:
+                      <span>35cm</span>
+                    </li>
+
+                    <li class="add-basket__tab-item">
+                      Длина Топа:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Длина брюк:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Длина рукава:
+                      <span>35cm</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="add-basket__tab-content text-font-14" id="size-xxl">
+                  <div class="add-basket__tab-title">Изменения Товаров</div>
+                  <ul class="add-basket__tab-list">
+                    <li class="add-basket__tab-item">
+                      Обхват талии:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Окружность бедра:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Длина Топа:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item">
+                      Длина брюк:
+                      <span>35cm</span>
+                    </li>
+                    <li class="add-basket__tab-item ">
+                      Длина рукава:
+                      <span>35cm</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="add-basket__count-block">
+                <div class="add-basket__count-title text-font-16">Количество</div>
+                <div class="add-basket__count-el">
+                  <button class="add-basket__count-btn minus text-font-16">-</button>
+                  <input type="text" class="add-basket__count-number text-font-16" value="1" />
+                  <button class="add-basket__count-btn plus text-font-16">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="container add-basket__row-3">
+              <div class="add-basket__color-title text-font-16">Цвет (8)</div>
+              <div class="add-basket__custom-scroll">
+                <div class="add-basket__color-block">
+                  <div class="add-basket__color-col">
+                    <div class="add-basket__color-btn" data-id="1">
+                      <img src="img/maximize.svg" class="add-basket__color-zoom">
+                      <input id="color-1" type="radio" name="color" value="розовый" />
+                      <label class="add-basket__color-lbl" for="color-1">
+                        <div class="add-basket__color-lbl-content">
+                          <img src="img/20.jpg" alt="Цвет" />
+                          <div class="text-font-14">Розовый</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="add-basket__color-btn" data-id="2">
+                      <img src="img/maximize.svg" class="add-basket__color-zoom">
+                      <input id="color-2" type="radio" name="color" value="розовый" />
+                      <label class="add-basket__color-lbl" for="color-2">
+                        <div class="add-basket__color-lbl-content">
+                          <img src="img/19.jpg" alt="Цвет" />
+                          <div class="text-font-14">Чёрная фуксия</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="add-basket__color-col">
+                    <div class="add-basket__color-btn" data-id="3">
+                      <img src="img/maximize.svg" class="add-basket__color-zoom">
+                      <input id="color-3" type="radio" name="color" value="розовый" />
+                      <label class="add-basket__color-lbl" for="color-3">
+                        <div class="add-basket__color-lbl-content">
+                          <img src="img/18.jpg" alt="Цвет" />
+                          <div class="text-font-14">Синий</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="add-basket__color-btn" data-id="4">
+                      <img src="img/maximize.svg" class="add-basket__color-zoom">
+                      <input id="color-4" type="radio" name="color" value="розовый" />
+                      <label class="add-basket__color-lbl" for="color-4">
+                        <div class="add-basket__color-lbl-content">
+                          <img src="img/17.jpg" alt="Цвет" />
+                          <div class="text-font-14">Белый</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="add-basket__color-col">
+                    <div class="add-basket__color-btn" data-id="5">
+                      <img src="img/maximize.svg" class="add-basket__color-zoom">
+                      <input id="color-5" type="radio" name="color" value="розовый" />
+                      <label class="add-basket__color-lbl" for="color-5">
+                        <div class="add-basket__color-lbl-content">
+                          <img src="img/16.jpg" alt="Цвет" />
+                          <div class="text-font-14">Красный апельсин</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="add-basket__color-btn" data-id="6">
+                      <img src="img/maximize.svg" class="add-basket__color-zoom">
+                      <input id="color-6" type="radio" name="color" value="розовый" />
+                      <label class="add-basket__color-lbl" for="color-6">
+                        <div class="add-basket__color-lbl-content">
+                          <img src="img/15.jpg" alt="Цвет" />
+                          <div class="text-font-14">Жёлтый</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="add-basket__color-col">
+                    <div class="add-basket__color-btn" data-id="7">
+                      <img src="img/maximize.svg" class="add-basket__color-zoom">
+                      <input id="color-7" type="radio" name="color" value="розовый" />
+                      <label class="add-basket__color-lbl" for="color-7">
+                        <div class="add-basket__color-lbl-content">
+                          <img src="img/12.jpg" alt="Цвет" />
+                          <div class="text-font-14">Фиолетовый</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- отзывы -->
+        <div class="detail-page__recall">
+          <div class="container section__container detail-page__recall-container">
+            <a href="recall.html" class="detail-page__recall-hat">
+              <div class="detail-page__recall-header">
+                <h2 class="section__title detail-page__recall-title">
+                  Отзывы
+                  <span class="count">(140)</span>
+                </h2>
+                <div href="recall.html" class="detail-page__recall-all text-font-14">
+                  Все отзывы >
+                </div>
+              </div>
+            </a>
+            <div class="detail-page__recall-block">
+              <div class="detail-page__recall-user">
+                <img src="img/user.svg" alt="Пользователь" />
+                <span class="name">t**8</span>
+              </div>
+              <div class="detail-page__recall-text">
+                <p>
+                  Футболка очень классная, все нравится, Материал хороший,
+                  плотный. все как на...
+                </p>
+              </div>
+            </div>
+            <div class="detail-page__recall-block">
+              <div class="detail-page__recall-user">
+                <img src="img/user.svg" alt="Пользователь" />
+                <span class="name">t**2</span>
+              </div>
+              <div class="detail-page__recall-text">
+                <p>
+                  Футболка как в описании, на ощуп похож...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- похожие товары -->
+        <div class="detail-page__similar">
+          <div class="container section__container detail-page__similar-container">
+            <div class="detail-page__similar-header">
+              <h2 class="section__title detail-page__similar-title">
+                Похожие товары
+              </h2>
+              <a href="#" class="detail-page__similar-all text-font-14">
+                Посмотреть все >
+              </a>
+            </div>
+            <ul class="detail-page__similar-cards">
+              <li class="detail-page__similar-card">
+                <a href="/" class="detail-page__similar-img">
+                  <img src="img/23.jpg" alt="Название товара" />
+                </a>
+                <div class="detail-page__similar-info">
+                  <a href="/" class="detail-page__similar-name text-font-16">
+                    Футболка с принтами корейский стиль
+                  </a>
+                  <div class="detail-page__similar-sold text-font-14">900 продано</div>
+                  <div class="detail-page__similar-price text-font-18">1 290 тг.</div>
+                </div>
+              </li>
+              <li class="detail-page__similar-card">
+                <a href="/" class="detail-page__similar-img">
+                  <img src="img/22.jpg" alt="Название товара" />
+                </a>
+                <div class="detail-page__similar-info">
+                  <a href="/" class="detail-page__similar-name text-font-16">
+                    Футболка с принтами
+                  </a>
+                  <div class="detail-page__similar-sold text-font-14">900 продано</div>
+                  <div class="detail-page__similar-price text-font-18">1 290 тг.</div>
+                </div>
+              </li>
+              <li class="detail-page__similar-card">
+                <a href="/" class="detail-page__similar-img">
+                  <img src="img/17.jpg" alt="Название товара" />
+                </a>
+                <div class="detail-page__similar-info">
+                  <a href="/" class="detail-page__similar-name text-font-16">
+                    Футболка с принтами
+                  </a>
+                  <div class="detail-page__similar-sold text-font-14">900 продано</div>
+                  <div class="detail-page__similar-price text-font-18">1 290 тг.</div>
+                </div>
+              </li>
+              <li class="detail-page__similar-card">
+                <a href="/" class="detail-page__similar-img">
+                  <img src="img/15.jpg" alt="Название товара" />
+                </a>
+                <div class="detail-page__similar-info">
+                  <a href="/" class="detail-page__similar-name text-font-16">
+                    Футболка с принтами
+                  </a>
+                  <div class="detail-page__similar-sold text-font-14">900 продано</div>
+                  <div class="detail-page__similar-price text-font-18">1 290 тг.</div>
+                </div>
+              </li>
+              <li class="detail-page__similar-card">
+                <a href="/" class="detail-page__similar-img">
+                  <img src="img/13.jpg" alt="Название товара" />
+                </a>
+                <div class="detail-page__similar-info">
+                  <a href="/" class="detail-page__similar-name text-font-16">
+                    Футболка с принтами
+                  </a>
+                  <div class="detail-page__similar-sold text-font-14">900 продано</div>
+                  <div class="detail-page__similar-price text-font-18">1 290 тг.</div>
+                </div>
+              </li>
+              <li class="detail-page__similar-card">
+                <a href="/" class="detail-page__similar-img">
+                  <img src="img/11.jpg" alt="Название товара" />
+                </a>
+                <div class="detail-page__similar-info">
+                  <a href="/" class="detail-page__similar-name text-font-16">
+                    Футболка с принтами
+                  </a>
+                  <div class="detail-page__similar-sold text-font-14">900 продано</div>
+                  <div class="detail-page__similar-price text-font-18">1 290 тг.</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Информация о товаре -->
+        <div class="detail-page__info">
+          <div class="container section__container detail-page__info-container">
+            <div class="detail-page__info-header">
+              <h2 class="section__title detail-page__info-title">
+                Описание товара
+              </h2>
+              <div class="icon"></div>
+            </div>
+            <div class="detail-page__info-block text-font-18">
+              <div class="detail-page__info-el">
+                <div class="desc">Описание описание описание</div>
+                <div class="text">описание, описание</div>
+              </div>
+              <div class="detail-page__info-el">
+                <div class="desc">Описание</div>
+                <div class="text">описание, описание</div>
+              </div>
+              <div class="detail-page__info-el">
+                <div class="desc">Описание</div>
+                <div class="text">описание, описание</div>
+              </div>
+              <div class="detail-page__info-el">
+                <div class="desc">Описание</div>
+                <div class="text">описание, описание</div>
+              </div>
+              <div class="detail-page__info-el">
+                <div class="desc">Описание</div>
+                <div class="text">описание, описание</div>
+              </div>
+              <div class="detail-page__info-el">
+                <div class="desc">Описание</div>
+                <div class="text">описание, описание</div>
+              </div>
+              <div id="detail-page__info-window">
+                <div class="detail-page__info-window-header">
+                  <p class="detail-page__info-window-p section__title">Описание товара</p>
+                  <span id="detail-page__info-close"><img src="./img/close-button.svg" alt=""></span>
+                </div>
+                <hr class="detail-page__info-window-hr">
+                <div class="detail-page__info-window-content text-font-18">
+                  <div class="detail-page__info-el">
+                    <div class="desc">Описание</div>
+                    <div class="text">описание, описание</div>
+                  </div>
+                  <div class="detail-page__info-el">
+                    <div class="desc">Описание Описание</div>
+                    <div class="text">описание, описание</div>
+                  </div>
+                  <div class="detail-page__info-el">
+                    <div class="desc">Описание</div>
+                    <div class="text">описание, описание</div>
+                  </div>
+                  <div class="detail-page__info-el">
+                    <div class="desc">Описание</div>
+                    <div class="text">описание, описание</div>
+                  </div>
+                  <div class="detail-page__info-el">
+                    <div class="desc">Описание</div>
+                    <div class="text">описание, описание</div>
+                  </div>
+                  <div class="detail-page__info-el">
+                    <div class="desc">Описание</div>
+                    <div class="text">описание, описание</div>
+                  </div>
+                  <div class="detail-page__info-el">
+                    <div class="desc">Описание</div>
+                    <div class="text">описание, описание</div>
+                  </div>
+                  <div class="detail-page__info-el">
+                    <div class="desc">Описание</div>
+                    <div class="text">описание, описание</div>
+                  </div>
+                  <div class="detail-page__info-el">
+                    <div class="desc">Описание</div>
+                    <div class="text">описание, описание</div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="detail-page__info-link text-font-16">Подробнее</a>
+            </div>
+          </div>
+          <div class="container-info">
+            <div id="detail-page__info-img-window">
+              <div class="detail-page__add-slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="add-slider__item swiper-slide">
+                    <img src="img/6.jpg" alt="Товар" />
+                  </div>
+                  <div class="add-slider__item swiper-slide">
+                    <img src="img/7.jpg" alt="Товар" />
+                  </div>
+                  <div class="add-slider__item swiper-slide">
+                    <img src="img/8.jpg" alt="Товар" />
+                  </div>
+                  <div class="add-slider__item swiper-slide">
+                    <img src="img/9.jpg" alt="Товар" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="detail-page__info-content">
+              <div class="more" data-num="0">
+                <img src="img/6.jpg" alt="Товар" class="detail-page__info-img" />
+              </div>
+              <div class="more" data-num="1">
+                <img src="img/7.jpg" alt="Товар" class="detail-page__info-img" />
+              </div>
+              <div class="more" data-num="2">
+                <img src="img/8.jpg" alt="Товар" class="detail-page__info-img" />
+              </div>
+              <div class="more" data-num="3">
+                <img src="img/9.jpg" alt="Товар" class="detail-page__info-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Подобрано для вас -->
+        <div class="detail-page__foryou">
+          <div class="container">
+            <h2 class="section__title detail-page__foryou-title">
+              Подобрано для Вас
+            </h2>
+            <ul class="detail-page__foryou-cards">
+              <li class="detail-page__foryou-card">
+                <a href="/" class="detail-page__foryou-link">
+                  <div class="detail-page__foryou-img">
+                    <img src="img/10.jpg" alt="Название товара" />
+                  </div>
+                  <div class="detail-page__foryou-name text-font-16">
+                    Футболка с набписью корейский стиль 2021 2022
+                  </div>
+                  <div class="detail-page__foryou-block">
+                    <div class="price text-font-18">1 390 тг.</div>
+                    <div class="sold">3 950 продано</div>
+                  </div>
+                </a>
+              </li>
+              <li class="detail-page__foryou-card">
+                <a href="/" class="detail-page__foryou-link">
+                  <div class="detail-page__foryou-img">
+                    <img src="img/11.jpg" alt="Название товара" />
+                  </div>
+                  <div class="detail-page__foryou-name text-font-16">
+                    Футболка с набписью корейский стиль 2021
+                  </div>
+                  <div class="detail-page__foryou-block">
+                    <div class="price text-font-18">1 390 тг.</div>
+                    <div class="sold">3 950 продано</div>
+                  </div>
+                </a>
+              </li>
+              <li class="detail-page__foryou-card">
+                <a href="/" class="detail-page__foryou-link">
+                  <div class="detail-page__foryou-img">
+                    <img src="img/12.jpg" alt="Название товара" />
+                  </div>
+                  <div class="detail-page__foryou-name text-font-16">
+                    Футболка с набписью корейский стиль 2021
+                  </div>
+                  <div class="detail-page__foryou-block">
+                    <div class="price text-font-18">1 390 тг.</div>
+                    <div class="sold">3 950 продано</div>
+                  </div>
+                </a>
+              </li>
+              <li class="detail-page__foryou-card">
+                <a href="/" class="detail-page__foryou-link">
+                  <div class="detail-page__foryou-img">
+                    <img src="img/13.jpg" alt="Название товара" />
+                  </div>
+                  <div class="detail-page__foryou-name text-font-16">
+                    Футболка с набписью корейский стиль 2021
+                  </div>
+                  <div class="detail-page__foryou-block">
+                    <div class="price text-font-18">1 390 тг.</div>
+                    <div class="sold">3 950 продано</div>
+                  </div>
+                </a>
+              </li>
+              <li class="detail-page__foryou-card">
+                <a href="/" class="detail-page__foryou-link">
+                  <div class="detail-page__foryou-img">
+                    <img src="img/14.jpg" alt="Название товара" />
+                  </div>
+                  <div class="detail-page__foryou-name text-font-16">
+                    Футболка с набписью корейский стиль 2021
+                  </div>
+                  <div class="detail-page__foryou-block">
+                    <div class="price text-font-18">1 390 тг.</div>
+                    <div class="sold">3 950 продано</div>
+                  </div>
+                </a>
+              </li>
+              <li class="detail-page__foryou-card">
+                <a href="/" class="detail-page__foryou-link">
+                  <div class="detail-page__foryou-img">
+                    <img src="img/15.jpg" alt="Название товара" />
+                  </div>
+                  <div class="detail-page__foryou-name text-font-16">
+                    Футболка с набписью корейский стиль 2021
+                  </div>
+                  <div class="detail-page__foryou-block">
+                    <div class="price text-font-18">1 390 тг.</div>
+                    <div class="sold">3 950 продано</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- NEW COWER -->
+      <main class="add-basketCov" id="add-basket">
+        <div class="add-basket__row-0">
+          <div class="detail-page__img">
+            <div id="detail-page__slide-window">
+              <div class="detail-page__slider-window slider-connect swiper">
+                <div class="swiper-wrapper">
+                  <div class="slide-item swiper-slide">
+                    <img src="img/21.jpg" alt="Слайд 1" />
+                  </div>
+                  <div class="slide-item swiper-slide">
+                    <img src="img/13.jpg" alt="Слайд 2" />
+                  </div>
+                  <div class="slide-item swiper-slide">
+                    <img src="img/10.jpg" alt="Слайд 3" />
+                  </div>
+                  <div class="slide-item swiper-slide">
+                    <img src="img/8.jpg" alt="Слайд 4" />
+                  </div>
+                  <div class="slide-item swiper-slide">
+                    <img src="img/1.jpg" alt="Слайд 5" />
+                  </div>
+                </div>
+              </div>
+              <div class="detail-page__slide-content">
+                <div class="detail-page__desc-name">
+                  Короткая куртка с утолщением из бархата, весна 2021
+                </div>
+                <div class="detail-page__desc-price">
+                  <span class="new">10 500 тг.</span>
+                  <span class="old">10 500 тг.</span>
+                </div>
+              </div>
+            </div>
+            <div id="detail-page__sliderBasket" class="detail-page__sliderBasket slider-connect swiper">
+              <div class="swiper-wrapper new">
+                <div class="slide-item-mod swiper-slide" id="slide-item-mod" data-num="0">
+                  <img src="img/21.jpg" alt="Слайд 1" />
+                </div>
+                <div class="slide-item-mod swiper-slide" data-num="1">
+                  <img src="img/13.jpg" alt="Слайд 2" />
+                </div>
+                <div class="slide-item-mod swiper-slide" data-num="2">
+                  <img src="img/10.jpg" alt="Слайд 3" />
+                </div>
+                <div class="slide-item-mod swiper-slide" data-num="3">
+                  <img src="img/8.jpg" alt="Слайд 4" />
+                </div>
+                <div class="slide-item-mod swiper-slide" data-num="4">
+                  <img src="img/1.jpg" alt="Слайд 5" />
+                </div>
+              </div>
+              <!-- <div class="detail-page__dots swiper-pagination"></div> -->
+            </div>
+          </div>
+        </div>
+        <section class="add-basket">
+          <div class="add-basket__wrapper">
+            <div class="add-basket__wrapper-content">
+              <!-- NEW SLAIDER -->
+
+              <div class="container add-basket__row-1">
+                <a href="#" class="add-basket__close" id="add-basket__close"></a>
+                <div class="add-basket__info">
+                  <div class="add-basket__price">
+                    <span class="new text-font-24">10 500 тг.</span>
+                  </div>
+                  <span class="stock text-font-16">В наличии: 2 000 шт.</span>
+                  <span class="type text-font-16">Выбранное: "М" "синий"</span>
+                </div>
+              </div>
+              <div class="container add-basket__row-3">
+                <div class="add-basket__color-title text-font-16">Цвет (8)</div>
+                <div class="add-basket__custom-scroll">
+                  <div class="add-basket__color-block">
+                    <div class="add-basket__color-col">
+                      <div class="add-basket__color-btn" data-id="1">
+                        <img src="img/maximize.svg" class="add-basket__color-zoom">
+                        <input id="color-1" type="radio" name="color" value="розовый" />
+                        <label class="add-basket__color-lbl" for="color-1">
+                          <div class="add-basket__color-lbl-content">
+                            <img src="img/20.jpg" alt="Цвет" />
+                            <div class="text-font-14">Розовый</div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="add-basket__color-btn" data-id="2">
+                        <img src="img/maximize.svg" class="add-basket__color-zoom">
+                        <input id="color-2" type="radio" name="color" value="розовый" />
+                        <label class="add-basket__color-lbl" for="color-2">
+                          <div class="add-basket__color-lbl-content">
+                            <img src="img/19.jpg" alt="Цвет" />
+                            <div class="text-font-14">Чёрная фуксия</div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="add-basket__color-col">
+                      <div class="add-basket__color-btn" data-id="3">
+                        <img src="img/maximize.svg" class="add-basket__color-zoom">
+                        <input id="color-3" type="radio" name="color" value="розовый" />
+                        <label class="add-basket__color-lbl" for="color-3">
+                          <div class="add-basket__color-lbl-content">
+                            <img src="img/18.jpg" alt="Цвет" />
+                            <div class="text-font-14">Синий</div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="add-basket__color-btn" data-id="4">
+                        <img src="img/maximize.svg" class="add-basket__color-zoom">
+                        <input id="color-4" type="radio" name="color" value="розовый" />
+                        <label class="add-basket__color-lbl" for="color-4">
+                          <div class="add-basket__color-lbl-content">
+                            <img src="img/17.jpg" alt="Цвет" />
+                            <div class="text-font-14">Белый</div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="add-basket__color-col">
+                      <div class="add-basket__color-btn" data-id="5">
+                        <img src="img/maximize.svg" class="add-basket__color-zoom">
+                        <input id="color-5" type="radio" name="color" value="розовый" />
+                        <label class="add-basket__color-lbl" for="color-5">
+                          <div class="add-basket__color-lbl-content">
+                            <img src="img/16.jpg" alt="Цвет" />
+                            <div class="text-font-14">Красный апельсин</div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="add-basket__color-btn" data-id="6">
+                        <img src="img/maximize.svg" class="add-basket__color-zoom">
+                        <input id="color-6" type="radio" name="color" value="розовый" />
+                        <label class="add-basket__color-lbl" for="color-6">
+                          <div class="add-basket__color-lbl-content">
+                            <img src="img/15.jpg" alt="Цвет" />
+                            <div class="text-font-14">Жёлтый</div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="add-basket__color-col">
+                      <div class="add-basket__color-btn" data-id="7">
+                        <img src="img/maximize.svg" class="add-basket__color-zoom">
+                        <input id="color-7" type="radio" name="color" value="розовый" />
+                        <label class="add-basket__color-lbl" for="color-7">
+                          <div class="add-basket__color-lbl-content">
+                            <img src="img/12.jpg" alt="Цвет" />
+                            <div class="text-font-14">Фиолетовый</div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container add-basket__row-2">
+                <div class="add-basket__row-2-header">
+                  <div class="add-basket__size-title text-font-16">Размеры</div>
+                  <a href="help.html" class="add-basket__tab-link text-font-16">
+                    Таблица размеров
+                  </a>
+                </div>
+                <div class="add-basket__size-block">
+                  <div class="add-basket__size-btn">
+                    <input id="size-m" type="radio" name="size" value="75~90" data-btn="size-m" />
+                    <label for="size-m" class="text-font-16">M 75~90</label>
+                  </div>
+                  <div class="add-basket__size-btn">
+                    <input id="size-l" type="radio" name="size" value="91~110" data-btn="size-l" />
+                    <label for="size-l" class="text-font-16">L 91~110</label>
+                  </div>
+                  <div class="add-basket__size-btn">
+                    <input id="size-xl" type="radio" name="size" value="111~125" data-btn="size-xl" />
+                    <label for="size-xl" class="text-font-16">XL 111~125</label>
+                  </div>
+                  <div class="add-basket__size-btn">
+                    <input id="size-xxl" type="radio" name="size" value="126~140" data-btn="size-xxl" />
+                    <label for="size-xxl" class="text-font-16">2XL 126~140</label>
+                  </div>
+                </div>
+                <div class="add-basket__tab">
+                  <div class="add-basket__tab-content text-font-14" id="size-m">
+                    <div class="add-basket__tab-title">Изменения Товаров</div>
+                    <ul class="add-basket__tab-list">
+                      <li class="add-basket__tab-item">
+                        Плечо:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Бюст:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Обхват талии:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Длина брюк:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Длина рукава:
+                        <span>35cm</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="add-basket__tab-content text-font-14" id="size-l">
+                    <div class="add-basket__tab-title">Изменения Товаров</div>
+                    <ul class="add-basket__tab-list">
+                      <li class="add-basket__tab-item">
+                        Плечо:
+                        <span>35cm</span>
+                      </li>
+
+                      <li class="add-basket__tab-item">
+                        Обхват талии:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Окружность бедра:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Длина Топа:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Длина брюк:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Длина рукава:
+                        <span>35cm</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="add-basket__tab-content text-font-14" id="size-xl">
+                    <div class="add-basket__tab-title">Изменения Товаров</div>
+                    <ul class="add-basket__tab-list">
+                      <li class="add-basket__tab-item">
+                        Плечо:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Бюст:
+                        <span>35cm</span>
+                      </li>
+
+                      <li class="add-basket__tab-item">
+                        Длина Топа:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Длина брюк:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Длина рукава:
+                        <span>35cm</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="add-basket__tab-content text-font-14" id="size-xxl">
+                    <div class="add-basket__tab-title">Изменения Товаров</div>
+                    <ul class="add-basket__tab-list">
+                      <li class="add-basket__tab-item">
+                        Обхват талии:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Окружность бедра:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Длина Топа:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item">
+                        Длина брюк:
+                        <span>35cm</span>
+                      </li>
+                      <li class="add-basket__tab-item ">
+                        Длина рукава:
+                        <span>35cm</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="add-basket__count-block">
+                  <div class="add-basket__count-title text-font-16">Количество</div>
+                  <div class="add-basket__count-el">
+                    <button class="add-basket__count-btn minus text-font-16">-</button>
+                    <input type="text" class="add-basket__count-number text-font-16" value="1" />
+                    <button class="add-basket__count-btn plus text-font-16">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer footer-detail footer-open">
+              <div class="container footer__container footer-detail__container">
+                <button type="button" class="footer-detail__new-btn sale">11990₸</button>
+                <button type="button" id="btn-to-basket" class="footer-detail__new-btn basket to-basket">
+                  5990₸ <br>
+                  <span>Цена со скидкой ></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        </m>
+        <div id="add-basket__color-window">
+          <div class="add-basket__color-slider swiper">
+            <div class="swiper-wrapper">
+              <div class="color-slider__item swiper-slide">
+                <img src="img/20.jpg" alt="Цвет" />
+                <div class="color-slider__item-content">
+                  <div class="slider__item-color">Розовый</div>
+                  <div class="new">10 500 тг</div>
+                </div>
+              </div>
+              <div class="color-slider__item swiper-slide">
+                <img src="img/19.jpg" alt="Цвет" />
+                <div class="color-slider__item-content">
+                  <div class="slider__item-color">Чёрная фуксия</div>
+                  <div class="new">10 500 тг</div>
+                </div>
+              </div>
+              <div class="color-slider__item swiper-slide">
+                <img src="img/18.jpg" alt="Цвет" />
+                <div class="color-slider__item-content">
+                  <div class="slider__item-color">Синий</div>
+                  <div class="new">10 500 тг</div>
+                </div>
+              </div>
+              <div class="color-slider__item swiper-slide">
+                <img src="img/17.jpg" alt="Цвет" />
+                <div class="color-slider__item-content">
+                  <div class="slider__item-color">Белый</div>
+                  <div class="new">10 500 тг</div>
+                </div>
+              </div>
+              <div class="color-slider__item swiper-slide">
+                <img src="img/16.jpg" alt="Цвет" />
+                <div class="color-slider__item-content">
+                  <div class="slider__item-color">Красный апельсин</div>
+                  <div class="new">10 500 тг</div>
+                </div>
+              </div>
+              <div class="color-slider__item swiper-slide">
+                <img src="img/15.jpg" alt="Цвет" />
+                <div class="color-slider__item-content">
+                  <div class="slider__item-color">Жёлтый</div>
+                  <div class="new">10 500 тг</div>
+                </div>
+              </div>
+              <div class="color-slider__item swiper-slide">
+                <img src="img/12.jpg" alt="Цвет" />
+                <div class="color-slider__item-content">
+                  <div class="slider__item-color">Фиолетовый</div>
+                  <div class="new">10 500 тг</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+  </div>
+  <footer class="footer footer-detail">
+    <div class="container footer__container footer-detail__container">
+      <a href="./basket.html">
+        <button class="page-header__button" id="burger">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="15" fill="none" stroke="transparent" fill-opacity="0" />
+            <path
+              d="M24.0202 19.6318L24.0202 19.6318C23.9879 19.774 23.8614 19.875 23.7155 19.875H12.2645H11.4988L11.6522 20.6252L11.9079 21.8752L12.0101 22.375H12.5202H23.0053C23.2058 22.375 23.3544 22.5612 23.31 22.7568L23.0945 23.705L22.9845 24.1891L23.431 24.4058C23.9541 24.6597 24.3125 25.1949 24.3125 25.8125C24.3125 26.6754 23.613 27.375 22.75 27.375C21.8871 27.375 21.1875 26.6754 21.1875 25.8125C21.1875 25.3754 21.3665 24.9811 21.657 24.6965L22.7507 23.625H21.2197H13.0303H11.4991L12.593 24.6965C12.8835 24.9811 13.0625 25.3754 13.0625 25.8125C13.0625 26.6754 12.3629 27.375 11.5 27.375C10.6371 27.375 9.9375 26.6754 9.9375 25.8125C9.9375 25.2339 10.2521 24.728 10.723 24.4572L11.1141 24.2323L11.0237 23.7902L8.27963 10.3748L8.17741 9.875H7.66731H4.9375C4.7649 9.875 4.625 9.7351 4.625 9.5625V8.9375C4.625 8.7649 4.7649 8.625 4.9375 8.625H8.94254C9.09102 8.625 9.21896 8.72947 9.24869 8.87483L9.2487 8.87486L9.60674 10.6253L9.70897 11.125H10.2191H25.5621C25.7626 11.125 25.9113 11.3112 25.8668 11.5068L24.0202 19.6318Z"
+              stroke="#000" stroke-width="1.25" />
+          </svg>
+          <div class="basket-counter" id="basket-counter">
+            <span id="counter" class="counter"></span>
+          </div>
+        </button>
+      </a>
+      <!-- <button id="btn-to-basket-sizes" type="button" class="footer__container-min min-container to-basket">1000</button> -->
+      <div class="footer__container-min min-container2">
+        <button type="button" class="footer-detail__new-btn sale">11990₸</button>
+
+        <button type="button" class="footer-detail__new-btn basket popup-basket">
+          5990₸ <br>
+          <span>Цена со скидкой ></span>
+        </button>
+      </div>
+    </div>
+  </footer>
+  <!-- jquery -->
+  <script src="script/jquery-3.6.0.min.js"></script>
+  <!-- слайдер свайпер -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- настройка свайпера -->
+  <script src="script/swiper.js"></script>
+  <!-- скрипты -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/2.0.0/jquery.mobile-events.min.js"> </script>
+  <script src="script/script.js"></script>
+</body>
+
+</html>

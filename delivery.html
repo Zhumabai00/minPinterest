@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+    <!-- шрифты -->
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <title>Блеквайт</title>
+</head>
+
+<body>
+    <div id="shadow"></div>
+    <header class="page-header categories-page__header">
+        <a href="./profile.html" class="page-header__button">
+            <img src="./img/back-index.svg" alt="etc">
+        </a>
+        <h3 class="page-header__title">Доставка</h3>
+        <button class="page-header__button categories-page__header-button" id="burger">
+            <img src="./img/dots.svg" alt="etc">
+        </button>
+    </header>
+    <div id="burger-window">
+        <div class="burger-window__wrapper">
+            <div class="burger-window__content-wrapper">
+                <div class="burger-window__content">
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/link.svg" alt="Скопировать ссылку">
+                        <div class="burger-window__content-name">
+                            Копировать ссылку
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/share-detail.svg" alt="Поделиться">
+                        <div class="burger-window__content-name">
+                            Поделиться
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/home-button.svg" alt="Домой">
+                        <div class="burger-window__content-name">
+                            Домой
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/basket-burger.svg" alt="В корзину">
+                        <div class="burger-window__content-name">
+                            В корзину
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/support.svg" alt=" Написать тех. поддержке">
+                        <div class="burger-window__content-name">
+                            Контакты
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/question-2.svg" alt="Оставить обращение">
+                        <div class="burger-window__content-name">
+                            Оставить обращение
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-detail footer-open">
+                <div class="container footer__container footer-detail__container">
+                    <button type="button" id="burger-close">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section__container information">
+        <div class="information-image">
+            <img src="./img/delivery.jpg" alt="return">
+        </div>
+        <div class="information-content">
+            <p class="information-content__text">
+                Мы предоставляем нашим клиентам лучший сервис и гарантируем максимально быструю и безопасную доставку
+                покупок курьерской службой.
+            </p>
+            <p class="information-content__text">
+                <span class="information-content__text-title">Сколько стоит доставка?<br></span>
+                Доставка заказов по Казахстану осуществляется бесплатно.
+            </p>
+            <p class="information-content__text">
+                <span class="information-content__text-title">Каким способом и в какой срок осуществляется курьерская
+                    доставка?<br></span>
+                Доставка осуществляется при помощи курьерской службы экспресс-доставки EMS-Kazpost. Стандартный срок
+                доставки заказа составляет до 7 рабочих дней, не включая время формирования и отправки заказа (от 1 до 3
+                рабочих дней). В праздничные дни время доставки может быть увеличено.
+            </p>
+            <p class="information-content__text">
+                После передачи заказа в службу доставки мы вышлем вам трек-код для его отслеживания на всех этапах
+                доставки. Перед доставкой вам будет отправлено СМС-сообщение со всей необходимой информацией, а также
+                курьер заранее свяжется с вами по телефону.
+            <p class="information-content__text">
+                В случае, если позиции из вашего заказа не окажется в наличии на складе интернет-магазина, мы отправим
+                вам этот товар из оффлайн-магазина «Lichi». В этом случае заказ может быть сформирован из нескольких
+                посылок, которые будут доставлены в разные сроки.
+            </p>
+            <p class="information-content__text">
+                Если у вас остались вопросы или возникли проблемы при оформлении заказа, пожалуйста, свяжитесь с нами.
+                Мы всегда рады вам помочь.
+            </p>
+            <ul class="information-content__list">
+                <li class="information-content__list-item">электронная почта <a href="№"
+                        class="information-content__text-link">(тут электронная почта)</a></li>
+                <li class="information-content__list-item">телефон горячей линии <a href="№"
+                        class="information-content__text-link">(тут номер телефона)</a></li>
+                <li class="information-content__list-item">служба поддержки в <a href="№"
+                        class="information-content__text-link">(тут ссылка на WhatsApp)</a></li>
+                <li class="information-content__list-item"><a href="№" class="information-content__text-link">(тут
+                        ссылка на онлайн чат)</a> на сайте</li>
+            </ul>
+        </div>
+    </section>
+    <!-- jquery -->
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <!-- скрипты -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>

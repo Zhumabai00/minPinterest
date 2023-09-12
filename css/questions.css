@@ -1,0 +1,135 @@
+.questions-page {
+    min-height: 93.5vh;
+    border-radius: 0 !important;
+}
+
+.questions-page__navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    align-items: center;
+    overflow-y: hidden;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.questions-page__navbar-item {
+    background-color: #fff;
+    color: #9f9f9f;
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.questions-page__navbar-item.active {
+    color: #2f2f2f;
+}
+
+.questions-page__navbar-item:not(:first-child) {
+    margin-left: 10px;
+}
+
+.questions-page__navbar::-webkit-scrollbar {
+    display: none;
+}
+
+.questions-page__questions.active {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.questions-page__questions-question {
+    display: flex;
+    color: #2f2f2f;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+.questions-page__questions-question img {
+    width: 8px;
+}
+
+/* answers page*/
+
+.body-white {
+    background-color: #fff;
+}
+
+.page-header-light {
+    background-color: #fff;
+}
+
+.page-header-light .page-header__button:last-child {
+    background-color: #fff;
+}
+
+.answer-page__row {
+    display: flex;
+}
+
+.answer-page__question-row {
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.answer-page__answer-row {
+    margin-bottom: 30px;
+}
+
+.answer-row__name, .question-row__name {
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.question-row__name {
+    color: #2f2f2f;
+}
+
+.answer-row__name {
+    color: #CC7240;
+    padding-left: 2px;
+}
+
+.question-row__text {
+    margin-left: 10px;
+}
+
+.answer-row__text {
+    color:#8c8c8c;
+    margin-left: 10px;
+}
+
+.question-row__text {
+    color: #2f2f2f;
+    font-size: 18px;
+}
+
+.answer-page__rating-title {
+    text-align: center;
+    color: #2f2f2f;
+    margin-bottom: 10px;
+}
+
+.answer-page__rating-buttons {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+    padding: 10px 0;
+}
+
+.answer-page__rating-buttons button {
+    display: flex;
+    background: transparent;
+    font-size: 17px;
+}
+
+.rating-buttons__dislike {
+    transform: rotate(180deg);
+}
+
+.rating-buttons__text {
+    margin-left: 5px;
+    color: #8c8c8c;
+}

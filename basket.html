@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+    <title>Блеквайт</title>
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+    <div id="shadow"></div>
+    <div id="basket-discount-window">
+        <div class="payment-change__window-header basket-discount__window-header" style="margin-bottom: 25px">
+            <div></div>
+            <div class="payment-change__header-title">
+                Детализация цены
+            </div>
+            <img id="close-basket-discount" src="./img/close-button.svg" alt="close">
+        </div>
+        <div id="basket-discount-images" class="basket-discount__images"></div>
+        <div class="basket-discount__blocks">
+            <div class="basket-discount-block">
+                <div class="ordering-page__block-column">
+                    <div class="basket-discount__block-text text-font-16">
+                        <!-- <span id="basket-discount-products-value"></span> <span id="products-counter-word">товаров</span> на сумму -->
+                        Стоимость товаров
+                    </div>
+                </div>
+                <div class="ordering-page__block-column">
+                    <div class="basket-discount__block-uptext text-font-18">
+                        <span id="total-price-basket-window"></span> <span class="price-tenge-18">₸</span>
+                    </div>
+                </div>
+            </div>
+            <div class="basket-discount-block" id="user-discount-block">
+                <div class="ordering-page__block-column">
+                    <div class="basket-discount__block-text text-font-16">
+                        Скидка покупателя
+                    </div>
+                </div>
+                <div class="ordering-page__block-column">
+                    <div class="basket-discount__block-uptext text-font-18 basket-discount__block-orange">
+                        -10%
+                    </div>
+                </div>
+            </div>
+            <div id="show-basket-discount" class="basket-discount-block">
+                <div class="ordering-page__block-column">
+                    <div class="basket-discount__block-text text-font-14" style="font-size: 14px;">
+                        Акции
+                    </div>
+                </div>
+                <div class="ordering-page__block-column">
+                    <div class="basket-discount__block-uptext text-font-14 basket-discount__block-orange"
+                        style="font-size: 14px;">
+                        -10%
+                    </div>
+                    <img class="basket-discount__block-arrow" src="./img/arrow.svg" alt="..."
+                        style="margin-right: 12px;">
+                </div>
+            </div>
+            <div class="basket-discount__hidden">
+                <div id="basket-discount-images-small" class="basket-discount__images"></div>
+                <div class="detailed-price__label-info text-font-14" style="text-align: left;">
+                    <span class="detailed-price__info-text basket-discount__info-text text-font-14">Скидка на общую
+                        сумму заказа от 5990 тенге</span>&nbsp<span class="detailed-price__info">(без учета почтовых
+                        расходов)</span>
+                    <!-- <span class="basket-discount__info-text"> Итого: <span id="total-price-discount-1">245</span> <span class="price-tenge">₸</span>, Скидка -10%</span> -->
+                </div>
+            </div>
+            <div class="basket-discount-block" style="margin-top: 19px; ;">
+                <div class="ordering-page__block-column">
+                    <div class="basket-discount__block-text text-font-16">
+                        Итого
+                    </div>
+                </div>
+                <div class="ordering-page__block-column">
+                    <div class="basket-discount__block-uptext text-font-18">
+                        <span id="discount-price-basket-window"></span> <span class="price-tenge-18">₸</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="page-header categories-page__header" style="height: 55.67px;">
+        <a href="./index.html" class="page-header__button">
+            <img src="./img/back-index.svg" alt="etc">
+        </a>
+        <h3 class="page-header__title delayed-page__title text-font-18">Корзина <span id="basket-counter"></span></h3>
+        <button class="page-header__button categories-page__header-button text-font-16" id="basket-edit">
+            Выбрать
+        </button>
+    </header>
+    <section class="section__container basket-page container">
+        <div class="delayed-page__item basket-page__item">
+            <label class="custom-checkbox-basket" for="delayed-product1">
+                <input class="checkboxes basket-page__input" type="checkbox" name="delayed-product"
+                    id="delayed-product1">
+                <span class="custom-checkbox-span"></span>
+            </label>
+            <span class="custom-checkbox-span"></span>
+            <img class="basket-page__item-img" src="./img/1.jpg" alt="product">
+            <div class="delayed-page__item-content">
+                <div class="delayed-page__item-name basket-page__item-name text-font-16">
+                    Футболка с надписью корейский стиль 2021
+                </div>
+                <div class="delayed-page__item-recalls text-font-16" style="font-size: 16px;">
+                    Цвет: <span id="product-color">Розовый</span>; <span id="product-size">2XL</span> <img
+                        class="status-page__switch-image" src="./img/arrow.svg"
+                        style="position: absolute; width: 6px; margin-top: 5px; margin-left: 10px;">
+                </div>
+                <div class="basket-page__item-bottom">
+                    <div class="delayed-page__item-price text-font-18">
+                        1000 <span class="price-tenge-new">₸</span>
+                    </div>
+                    <div class="delayed-page__item-price basket-page__item-new text-font-14">
+                        новая цена <span class="price-with-discount">900</span> <span class="price-tenge-14">₸</span>
+                    </div>
+                    <div class="basket-page__item-counter">
+                        <button class="basket-page_product-minus basket-page_product-config">-</button>
+                        <input id="product1" class="basket-page__item-value" type="text" readonly name="product"
+                            value="x1" onclick="value='1'">
+                        <button class="basket-page__product-plus basket-page_product-config">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="basket-page__item-remove">
+                <img src="./img/minus.svg" alt="remove">
+            </div>
+            <div class="basket-page__item-config">
+                <div class="basket-page__item-delay text-font-14">
+                    <img src="./img/favourite-white.svg" alt="favourite">
+                    Отложить
+                </div>
+                <div class="basket-page__item-delete text-font-14">
+                    <img src="./img/delete.svg" alt="favourite">
+                    Удалить
+                </div>
+            </div>
+        </div>
+        <div class="delayed-page__item basket-page__item">
+            <label class="custom-checkbox-basket" for="delayed-product2">
+                <input class="checkboxes basket-page__input" type="checkbox" name="delayed-product"
+                    id="delayed-product2">
+                <span class="custom-checkbox-span"></span>
+            </label>
+            <img class="basket-page__item-img" src="./img/3.jpg" alt="product">
+            <div class="delayed-page__item-content">
+                <div class="delayed-page__item-name basket-page__item-name text-font-16">
+                    Футболка с надписью корейский стиль 2021
+                </div>
+                <div class="delayed-page__item-recalls text-font-16" style="font-size: 16px;">
+                    Цвет: <span id="product-color" style="font-size: 16px;" class="text-font-16">Красный</span>; <span
+                        id="product-size">L</span><img class="status-page__switch-image" src="./img/arrow.svg"
+                        style="position: absolute; width: 6px; margin-top: 5px; margin-left: 10px;">
+                </div>
+                <div class="basket-page__item-bottom">
+                    <div class="delayed-page__item-price text-font-18">
+                        1300 <span class="price-tenge-new">₸</span>
+                    </div>
+                    <div class="delayed-page__item-price basket-page__item-new text-font-14">
+                        новая цена <span class="price-with-discount">1170</span> <span class="price-tenge-14">₸</span>
+                    </div>
+                    <div class="basket-page__item-counter">
+                        <button class="basket-page_product-minus basket-page_product-config">-</button>
+                        <input id="product2" class="basket-page__item-value" readonly type="text" name="product"
+                            value="x1" onclick="value='1'">
+                        <button class="basket-page__product-plus basket-page_product-config">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="basket-page__item-remove">
+                <img src="./img/minus.svg" alt="remove">
+            </div>
+            <div class="basket-page__item-config">
+                <div class="basket-page__item-delay text-font-14">
+                    <img src="./img/favourite-white.svg" alt="favourite">
+                    Отложить
+                </div>
+                <div class="basket-page__item-delete text-font-14">
+                    <img src="./img/delete.svg" alt="favourite">
+                    Удалить
+                </div>
+            </div>
+        </div>
+        <div class="delayed-page__item basket-page__item">
+            <label class="custom-checkbox-basket" for="delayed-product3">
+                <input class="checkboxes basket-page__input" type="checkbox" name="delayed-product"
+                    id="delayed-product3">
+                <span class="custom-checkbox-span"></span>
+            </label>
+            <img class="basket-page__item-img" src="./img/2.jpg" alt="product">
+            <div class="delayed-page__item-content">
+                <div class="delayed-page__item-name basket-page__item-name text-font-16">
+                    Футболка с надписью корейский стиль 2021
+                </div>
+                <div class="delayed-page__item-recalls text-font-16" style="font-size: 16px;">
+                    Цвет: <span id="product-color" style="font-size: 16px;" class="text-font-16">Синий</span>; <span
+                        id="product-size">XL</span><img class="status-page__switch-image" src="./img/arrow.svg"
+                        style="position: absolute; width: 6px; margin-top: 5px; margin-left: 10px;">
+                </div>
+                <div class="basket-page__item-bottom">
+                    <div class="delayed-page__item-price text-font-18">
+                        1000 <span class="price-tenge-new">₸</span>
+                    </div>
+                    <div class="delayed-page__item-price basket-page__item-new text-font-14">
+                        новая цена <span class="price-with-discount">900</span> <span class="price-tenge-14">₸</span>
+                    </div>
+                    <div class="basket-page__item-counter">
+                        <button class="basket-page_product-minus basket-page_product-config">-</button>
+                        <input id="product3" class="basket-page__item-value" type="text" readonly name="product"
+                            value="x1" onclick="value='1'">
+                        <button class="basket-page__product-plus basket-page_product-config">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="basket-page__item-remove">
+                <img src="./img/minus.svg" alt="remove">
+            </div>
+            <div class="basket-page__item-config">
+                <div class="basket-page__item-delay text-font-14">
+                    <img src="./img/favourite-white.svg" alt="favourite">
+                    Отложить
+                </div>
+                <div class="basket-page__item-delete text-font-14">
+                    <img src="./img/delete.svg" alt="favourite">
+                    Удалить
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="foryou container">
+        <h2 class="section__title profile-page__foryou-title detail-page__foryou-title">
+            Подобрано для Вас
+        </h2>
+        <div class="subcategories-page__products-wrapper active">
+            <div class="page-products__col page-products__col-left">
+                <a href="./detail.html" class="page-products__col-item">
+                    <img src="img/100.jpg" alt="product" class="products-col__item-img">
+                    <div class="products-col__item-info">
+                        <div class="products-col__info-title text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="products-col__info-text">
+                            <span class="products-col__price text-font-18">
+                                1 390 тг.
+                            </span>
+                            <span class="products-col__sold">
+                                3 950 продано
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./detail.html" class="page-products__col-item">
+                    <img src="img/101.jpg" alt="product" class="products-col__item-img">
+                    <div class="products-col__item-info">
+                        <div class="products-col__info-title text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="products-col__info-text">
+                            <span class="products-col__price text-font-18">
+                                1 390 тг.
+                            </span>
+                            <span class="products-col__sold">
+                                3 950 продано
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./detail.html" class="page-products__col-item">
+                    <img src="img/102.jpg" alt="product" class="products-col__item-img">
+                    <div class="products-col__item-info">
+                        <div class="products-col__info-title text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="products-col__info-text">
+                            <span class="products-col__price text-font-18">
+                                1 390 тг.
+                            </span>
+                            <span class="products-col__sold">
+                                3 950 продано
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./detail.html" class="page-products__col-item">
+                    <img src="img/103.jpg" alt="product" class="products-col__item-img">
+                    <div class="products-col__item-info">
+                        <div class="products-col__info-title text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="products-col__info-text">
+                            <span class="products-col__price text-font-18">
+                                1 390 тг.
+                            </span>
+                            <span class="products-col__sold">
+                                3 950 продано
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="page-products__col page-products__col-right">
+                <a href="./detail.html" class="page-products__col-item">
+                    <img src="img/104.jpg" alt="product" class="products-col__item-img">
+                    <div class="products-col__item-info">
+                        <div class="products-col__info-title text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="products-col__info-text">
+                            <span class="products-col__price text-font-18">
+                                1 390 тг.
+                            </span>
+                            <span class="products-col__sold">
+                                3 950 продано
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./detail.html" class="page-products__col-item">
+                    <img src="img/105.jpg" alt="product" class="products-col__item-img">
+                    <div class="products-col__item-info">
+                        <div class="products-col__info-title text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="products-col__info-text">
+                            <span class="products-col__price text-font-18">
+                                1 390 тг.
+                            </span>
+                            <span class="products-col__sold">
+                                3 950 продано
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./detail.html" class="page-products__col-item">
+                    <img src="img/106.jpg" alt="product" class="products-col__item-img">
+                    <div class="products-col__item-info">
+                        <div class="products-col__info-title text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="products-col__info-text">
+                            <span class="products-col__price text-font-18">
+                                1 390 тг.
+                            </span>
+                            <span class="products-col__sold">
+                                3 950 продано
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./detail.html" class="page-products__col-item">
+                    <img src="img/108.jpg" alt="product" class="products-col__item-img">
+                    <div class="products-col__item-info">
+                        <div class="products-col__info-title text-font-16">
+                            Футболка с надписью корейский стиль 2021
+                        </div>
+                        <div class="products-col__info-text">
+                            <span class="products-col__price text-font-18">
+                                1 390 тг.
+                            </span>
+                            <span class="products-col__sold">
+                                3 950 продано
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="basket-page__panel">
+        <div class="delayed-page__window-all">
+            <input class="basket-page__item-all custom-checkbox-2" type="checkbox" name="delayed-product"
+                id="delayed-product-all">
+            <label class="select-all main-price-size">Выбрано (<span id="products-selected-value">0</span>)</label>
+        </div>
+        <div class="basket-page__window-right" style="font-size: 13px;">
+            <div class="basket-page__result main-price-size">
+                Итого:
+                <span id="total-price-basket-with-discount" class="total-price-basket text-font-14">0</span>
+                <span class="price-tenge-18">₸</span>
+                <div id="to-basket-discount" class="basket-page__discount">
+                    <span id="to-basket-discount-text">Скидка -10%</span> <img src="./img/arrow.svg" alt="arrow">
+                </div>
+            </div>
+            <a href="./ordering.html" class="basket-page__window-link main-price-size">
+                К оформлению
+            </a>
+        </div>
+    </div>
+    <div class="delayed-page__window viewed-page__window">
+        <div class="delayed-page__window-content">
+            <div class="delayed-page__window-all">
+                <input class="delayed-page__item-all custom-checkbox-2" type="checkbox" name="delayed-product"
+                    id="delayed-product-all">
+                <label class="select-all main-price-size">Все</label>
+            </div>
+            <div class="delayed-page__window-buttons">
+                <button type="button" class="basket-page__window-delay main-price-size">
+                    Отложить
+                </button>
+                <button type="button" class="basket-page__window-remove main-price-size">
+                    Удалить
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jquery -->
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <!-- скрипты -->
+
+    <script src="./script/basket.js"></script>
+    <script scr="./script/checkboxes.js"></script>
+</body>
+
+</html>

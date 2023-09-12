@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- шрифты -->
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+    <title>Блеквайт</title>
+</head>
+
+<body>
+    <div id="shadow"></div>
+    <header class="page-header categories-page__header">
+        <a href="./profile.html" class="page-header__button">
+            <img src="./img/back-index.svg" alt="etc">
+        </a>
+        <h3 class="page-header__title">Оплата</h3>
+        <button class="page-header__button categories-page__header-button" id="burger">
+            <img src="./img/dots.svg" alt="etc">
+        </button>
+    </header>
+    <div id="burger-window">
+        <div class="burger-window__wrapper">
+            <div class="burger-window__content-wrapper">
+                <div class="burger-window__content">
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/link.svg" alt="Скопировать ссылку">
+                        <div class="burger-window__content-name">
+                            Копировать ссылку
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/share-detail.svg" alt="Поделиться">
+                        <div class="burger-window__content-name">
+                            Поделиться
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/home-button.svg" alt="Домой">
+                        <div class="burger-window__content-name">
+                            Домой
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/basket-burger.svg" alt="В корзину">
+                        <div class="burger-window__content-name">
+                            В корзину
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/support.svg" alt=" Написать тех. поддержке">
+                        <div class="burger-window__content-name">
+                            Контакты
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/question-2.svg" alt="Оставить обращение">
+                        <div class="burger-window__content-name">
+                            Оставить обращение
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-detail footer-open">
+                <div class="container footer__container footer-detail__container">
+                    <button type="button" id="burger-close">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section__container information">
+        <div class="information-image">
+            <img src="./img/info-payment.jpg" alt="return">
+        </div>
+        <div class="information-content">
+            <p class="information-content__text">
+                При оформлении заказа на сайте оплата осуществляется через платежные шлюзы ePay и <a href="№"
+                    class="information-content__text-link">(тут CloudPayments)</a> в защищенном режиме с использованием
+                протокола шифрования SSL.<br>
+                Интернет-магазин не получает и не сохраняет данные Вашей карты или иных платежных реквизитов. Проведение
+                платежей осуществляется в строгом соответствии с требованиями платежных систем ePay и CloudPayments.
+            </p>
+            <p class="information-content__text">
+            <div class="information-content__text-title">Как оплатить заказ картой онлайн?</div>
+            </p>
+            <div class="information-content__images">
+                <img src="./img/epay.avif" alt="ePay">
+                <img src="./img/cloudpayments.webp" alt="CloudPayments">
+                <img src="./img/mastercard.webp" alt="MasterCard">
+                <img src="./img/visa.avif" alt="Visa">
+            </div>
+            <p class="information-content__text">
+                1. После нажатия кнопки "Продолжить" Вы будете перенаправлены на платежный шлюз ePay или CloudPayments,
+                где Вы сможете указать реквизиты Вашей банковской карты. Если Банк-Эмитент Вашей пластиковой карты
+                поддерживает технологию безопасного проведения интернет-платежей Verified By VISA или MasterCard
+                SecureCode, будьте готовы указать специальный пароль, необходимый для успешной оплаты. Способы и
+                возможность получения пароля для совершения интернет-платежа Вы можете уточнить в банке, выпустившем
+                Вашу карту.
+            </p>
+            <p class="information-content__text">
+                2. На странице сервера ePay или CloudPayments Вам будет предложено авторизовать банковскую карту и
+                ввести следующие данные:<br>
+                · владелец карты<br>
+                · номер карты<br>
+                · срок действия карты<br>
+                · CVV2 или CVC2 код карты (указан на обратной стороне банковской карты)<br>
+                Далее Вы сможете вернуться в наш интернет-магазин кликом по кнопке "Вернуться в магазин".
+            <p class="information-content__text">
+                3. После возвращения в наш магазин система уведомит Вас о результатах авторизации. До получения
+                успешного подтверждения платежа Ваш заказ будет находиться в режиме ожидания, а по факту проведения
+                оплаты переведен в режим доставки по указанному адресу.
+            </p>
+            <p class="information-content__text">
+                <strong>Обратите внимание! На оформление платежа ePay выделяется 20 минут. Пожалуйста, приготовьте
+                    банковскую карту заранее.<br>
+                    При отсутствии подтверждения оплаты в течение пяти дней заказ будет автоматически
+                    аннулирован.</strong>
+            </p>
+            <p class="information-content__text">
+                Случаи отказа в совершении платежа:<br>
+                · банковская карта не предназначена для совершения платежей через интернет, о чем можно узнать,
+                обратившись в Ваш Банк-эмитент;<br>
+                · недостаточно средств для оплаты на банковской карте. Подробнее о наличии средств на платежной карте Вы
+                можете узнать, обратившись в банк, выпустивший банковскую карту;<br>
+                · данные банковской карты введены неверно;<br>
+                · истек срок действия банковской карты. Срок действия (месяц и год, до которого действительна карта)
+                указан на лицевой стороне карты. Подробнее о сроке действия карты Вы можете узнать, обратившись в
+                банк-эмитент.
+            </p>
+            <p class="information-content__text">
+                По вопросам оплаты с помощью банковской карты и иным вопросам, связанным с работой сайта, Вы можете
+                обратиться по номеру: <a href="№" class="information-content__text-link">(тут номер телефона)</a>
+            </p>
+        </div>
+    </section>
+    <!-- jquery -->
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <!-- скрипты -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>

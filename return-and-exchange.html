@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- шрифты -->
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+    <title>Блеквайт</title>
+</head>
+
+<body>
+    <div id="shadow"></div>
+    <header class="page-header categories-page__header">
+        <a href="./profile.html" class="page-header__button">
+            <img src="./img/back-index.svg" alt="etc">
+        </a>
+        <h3 class="page-header__title">Возврат и обмен</h3>
+        <button class="page-header__button categories-page__header-button" id="burger">
+            <img src="./img/dots.svg" alt="etc">
+        </button>
+    </header>
+    <div id="burger-window">
+        <div class="burger-window__wrapper">
+            <div class="burger-window__content-wrapper">
+                <div class="burger-window__content">
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/link.svg" alt="Скопировать ссылку">
+                        <div class="burger-window__content-name">
+                            Копировать ссылку
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/share-detail.svg" alt="Поделиться">
+                        <div class="burger-window__content-name">
+                            Поделиться
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/home-button.svg" alt="Домой">
+                        <div class="burger-window__content-name">
+                            Домой
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/basket-burger.svg" alt="В корзину">
+                        <div class="burger-window__content-name">
+                            В корзину
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/support.svg" alt=" Написать тех. поддержке">
+                        <div class="burger-window__content-name">
+                            Контакты
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/question-2.svg" alt="Оставить обращение">
+                        <div class="burger-window__content-name">
+                            Оставить обращение
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-detail footer-open">
+                <div class="container footer__container footer-detail__container">
+                    <button type="button" id="burger-close">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section__container information">
+        <div class="information-image">
+            <img src="./img/return-exchange.jpg" alt="return">
+        </div>
+        <div class="information-content">
+            <p class="information-content__text">
+                Вы можете вернуть или обменять товар, не подошедший Вам по каким-либо причинам (фасон, размер, цвет) в
+                течение 7 календарных дней с момента получения заказа. Возврат товара возможен только в случае, если
+                указанный товар не был в употреблении, сохранен его первоначальный товарный вид, потребительские
+                свойства, оригинальные этикетки и документы, подтверждающие покупку.
+            </p>
+            <p class="information-content__text">
+                <span class="information-content__text-title">Как оформить возврат или обмен?<br></span>
+                Для того чтобы оформить возврат или обмен, пожалуйста, заполните форму заявки на возврат. Дальнейшие
+                действия описаны в инструкции для возврата или обмена товаров, приложенной к вашему заказу, там же
+                указан адрес и способ осуществления возврата. После получения Вашей возвратной посылки мы проверим, в
+                каком состоянии находятся товары, перед тем, как осуществлять их обмен на товары другого размера или
+                возврат их стоимости.
+            </p>
+            <p class="information-content__text">Обращаем ваше внимание на то, что отрывной бланк вложенной в заказ
+                накладной должен быть обязательно заполнен и отправлен вместе с товаром обратно для быстрой обработки
+                вашего возврата и перевода денежных средств.</p>
+            <p class="information-content__text"><span class="information-content__text-title">Кто оплачивает стоимость
+                    доставки в случае возврата или обмена?<br></span>
+                Первый обмен в рамках одного заказа на вещь аналогичной модели (артикула) другого размера происходит
+                бесплатно, и компания полностью берет на себя расходы за доставку до склада и за доставку обменного
+                заказа обратно.<br>
+                При оформлении возврата или второго и последующих обменов в рамках одного заказа, расходы за доставку
+                товаров до склада компании и до адресата полностью осуществляются за счет Клиента.
+            </p>
+            <p class="information-content__text">
+                <span class="information-content__text-title">В какой срок осуществляется возврат денежных
+                    средств?<br></span>
+                Мы вернем полную стоимость товара (или разницу стоимости — в случае обмена) путем перевода денежных
+                средств на ваш банковский счет в течение 10 рабочих дней с момента получения возврата. При осуществлении
+                возврата мы вычитаем сумму, потраченную нами за пересылку, таким образом стоимость отправки возвратной
+                посылки осуществляется за счёт клиента.
+            </p>
+            <p class="information-content__text">
+                Напоминаем, что возврату и обмену не подлежат некоторые группы товаров:
+            </p>
+            <ul class="information-content__list information-content__list-decoration">
+                <li class="information-content__list-item">нижнее белье, боди, чулочно-носочные изделия</li>
+                <li class="information-content__list-item">купальники</li>
+                <li class="information-content__list-item">бижутерия</li>
+                <li class="information-content__list-item">парфюмерно-косметические продукты</li>
+            </ul>
+            <p class="information-content__text">
+                Возврат вышеперечисленных товаров осуществляется только в случае производственного брака.
+            </p>
+            <p class="information-content__text">
+                Нашей компанией предусмотрен возврат товара ненадлежащего качества в том случае, если вам доставили
+                товар с заводским браком или в ходе эксплуатации был обнаружен скрытый дефект. Под товаром ненадлежащего
+                качества подразумевается товар, который неисправен, не соответствует использованию по целевому
+                назначению или имеет неустранимые недостатки. Отличие элементов дизайна или оформления от заявленных в
+                описании на сайте не является неисправностью товара. При отсутствии брака возвратная посылка на наш
+                склад осуществляется за счет клиента.
+            </p>
+            <p class="information-content__text">
+                Если у Вас возникли дополнительные вопросы, свяжитесь с нами:<br>
+                по телефону <a href="№" class="information-content__text-link">(тут номер телефона)</a>, по электронной
+                почте <a href="№" class="information-content__text-link">(тут электронная почта)</a> или в <a href="№"
+                    class="information-content__text-link">(тут ссылка на чат)</a>.
+            </p>
+            <p class="information-content__text">
+                Мы дорожим своей репутацией и трепетно относимся к каждому заказу!
+            </p>
+        </div>
+    </section>
+    <!-- jquery -->
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <!-- скрипты -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>

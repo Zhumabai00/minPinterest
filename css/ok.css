@@ -1,0 +1,75 @@
+.centr{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+		font-size: 1.17em;
+			color: #2f2f2f;
+}
+
+.payment-change__window-header,
+.write-note__window-header .imag {
+	justify-content: center;
+	flex-direction: column;
+}
+
+.payment-change__window-header img,
+.write-note__window-header .imag{
+	justify-content: center;
+	width: 63px;
+	height: 63px;
+}
+.colo,
+.basket-discount-block .detalis{
+	color: #fa6502;
+}
+
+.detalis{
+	font-size: 16px;
+}
+
+.colo{
+	font-size: 20px;
+}
+
+.imagess{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-bottom: 19px;
+}
+
+.imagess img{
+	width: 136px;
+		height: 78px;
+}
+
+#basket-discount-window{
+	position: relative;
+	z-index: 0;
+	padding-bottom: 50px;
+}
+
+.text{
+	font-size: 17px;
+	text-align: left;
+}
+
+#basket-discount-window .payment-change__header-title{
+	margin-left: 0;
+}
+
+.hidd{
+	transition: all 0.3s ease 0s;
+	display: block;
+}
+
+.price-tenge-18{
+	font-size: 18px;
+}
+
+.page-header{
+	height: 55px;
+}

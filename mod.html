@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="Image/x-icon" href="/img//logo.png" rel="icon">
+
+	<title>Блеквайт</title>
+
+	<!-- шрифты -->
+	<link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+	<link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+	<!-- стили -->
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./css/mod.css">
+</head>
+
+<body>
+	<div id="mydata-window" class="page-mydata__wrapper wra" style="display: block; opacity: 1;">
+		<header class="page-header page-header-light categories-page__header">
+			<button id="mydata-close" class="page-header__button">
+				<img src="./img/back-index.svg" alt="etc">
+			</button>
+			<h3 class="page-header__title page-mydata__header-title">Сброс пароля
+			</h3>
+			<div></div>
+		</header>
+		<section class="page-mydata container section__container">
+			<div class="page-mydata__title text-font-18">
+				Введите номер телефона,
+				который вы указывали при регистрации
+			</div>
+			<form action="" class="page-mydata__form forms">
+				<div class="page-mydata__form-inputs">
+					<input class="page-mydata__inputs-required" type="tel" id="phone" placeholder="Номер телефона">
+				</div>
+				<div class="page-mydata__form-buttons">
+					<button class="page-mydata__button-submit not" type="submit" disabled style="pointer-events: none;"><a
+							class="wid" href="#mods">Подтвердить</a></button>
+				</div>
+			</form>
+		</section>
+
+	</div>
+	<!-- 	modal -->
+	<div class="modal hidd" id="mods">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="modal-body__titl">
+					<p>
+						Запрос отправлен
+					</p>
+				</div>
+				<div class="modal-body__text">
+					<p>
+						Ваш запрос передан, ответим
+						на <span>WhatsApp</span>. Благодарим за ожидание.
+					</p>
+				</div>
+				<div class="modal-body__button">
+					<a href="https://wa.me/87000228828">Напишите нам</a>
+				</div>
+			</div>
+			<div class="modal-close">
+				<a href="profile.html">X</a>
+			</div>
+		</div>
+	</div>
+	<!-- modal -->
+	<!-- <script src="script/jquery-3.6.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+		<script src="./script/masks.js"></script> -->
+	<script src="./script/mod.js"></script>
+</body>
+
+</html>
